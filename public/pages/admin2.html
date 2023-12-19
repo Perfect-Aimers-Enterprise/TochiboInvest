@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/src/input.css">
+    <!-- <link rel="stylesheet" href="../fontawesome-free-6.4.2-web/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css" integrity="sha512-siarrzI1u3pCqFG2LEzi87McrBmq6Tp7juVsdmGY1Dr8Saw+ZBAzDzrGwX3vgxX1NkioYNCFOVC0GpDPss10zQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" integrity="sha512-P9vJUXK+LyvAzj8otTOKzdfF1F3UYVl13+F8Fof8/2QNb8Twd6Vb+VD52I7+87tex9UXxnzPgWA3rH96RExA7A==" crossorigin="anonymous" referrerpolicy="no-referrer"/> -->
+    <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+    <title>Tchibo Admin Dashboard</title>
+</head>
+<body>
+    <div id="generalDiv" class="md:flex justify-between">
+
+        <!-- The Side Bar Section  -->
+        <section id="sideBar" class="w-[20%] h-[100vh] shadow-md shadow-gray-900 hidden md:flex">
+            <div>
+                <!-- Admin Icon  -->
+                <div class="flex truncate mx-auto mt-[80px] border-4 rounded-full w-[80px] h-[80px] relative border-blue-900" >
+                    <i class="mx-auto mt-[10px] fa thin fa-user text-[65px]"></i>
+                </div>
+
+                <div id="adminName">
+                    <h4 class="text-center font-bold">Justina Ibeh</h4>
+                </div>
+
+                <div class="text-dimGold drops font-bold active:bg-blue-900 mt-[20px] hover:bg-dimGold hover:text-black">
+                    <h1 class="text-center">Cashout</h1>
+                </div>
+    
+                <div class="text-dimGold drops font-bold active:bg-blue-900 mt-[20px] hover:bg-dimGold hover:text-black">
+                    <h1 class="text-center">Reg Users:<span>100</span></h1>
+                </div>
+    
+                <div class="text-dimGold drops font-bold active:bg-blue-900 mt-[20px] hover:bg-dimGold hover:text-black">
+                    <h1 class="text-center">Setting</h1>
+                </div>
+    
+                <div class="text-dimGold drops font-bold active:bg-blue-900 mt-[20px] hover:bg-dimGold hover:text-black">
+                    <h1 class="text-center">Logout</h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Main Bar Section  -->
+        <section id="mainBar" class="w-[100%] bg-sweetBlue h-[100vh] absolute right-0 shadow-md shadow-gray-900">
+            <div class="flex gap-5"> ;
+                <h1 class="header text-white font-bold mx-auto mt-[40px]">Overview</h>
+            </div>
+
+
+            <div class="md:flex">
+           
+                <div class="">
+
+                    <div class="structure md:flex gap-5">
+                        <div id="userBorder" class="bg-blue-900 mt-[10px] shadow-md shadow-gray-900">
+                            <div class="w-[300px]">
+                                <div class="flex items-center ml-[10px]">
+                                        <div id="usericon1" class="flex truncate mt-[10px] border-2 rounded-full" >
+                                            <i class="usericon1 mx-auto fa thin fa-user text-[20px]"></i>
+                                        </div>
+                                    <h1 class="ml-[10px] text-goldenrod mt-[10px] font-bold">USERS</h1>
+                                </div>
+    
+                                <div class="flex mb-[50px] justify-around mt-[20px] text-goldenrod">
+                                    <!-- Latest Registered Users  -->
+                                    <div>
+                                        <p class="font-bold">Latest Registered</p>
+                                        <h1>200</h1>
+                                    </div>
+                                    <!-- Total Users  -->
+                                    <div>
+                                        <p class="font-bold">Total Users</p>
+                                        <h1>1,387,870</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div id="userBorder" class="bg-blue-900 mt-[10px] shadow-md shadow-gray-900">
+                            <div class="w-[300px]">
+                                <div class="flex items-center ml-[10px]">
+                                        <div id="usericon1" class="flex truncate mt-[10px] border-2 rounded-full" >
+                                            <i class="usericon1 mx-auto fa thin fa-user text-[20px]"></i>
+                                        </div>
+                                    <h1 class="ml-[10px] text-goldenrod mt-[10px] font-bold">USERS</h1>
+                                </div>
+    
+                                <div class="flex mb-[50px] justify-around mt-[20px] text-goldenrod">
+                                    <!-- Latest Registered Users  -->
+                                    <div>
+                                        <i class="fa-solid fa-money-bill-transfer"></i>
+                    
+                                    </div>
+                                    <!-- Total Users  -->
+                                    <div>
+                                        <p class="font-bold">Total Users</p>
+                                        <h1>1,387,870</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="structure md:flex gap-5">
+                        <div id="userBorder" class="bg-blue-900 mt-[10px] shadow-md shadow-gray-900">
+                            <div class="w-[300px]">
+                                <div class="flex items-center ml-[10px]">
+                                        <div id="usericon1" class="flex truncate mt-[10px] border-2 rounded-full" >
+                                            <i class="usericon1 mx-auto fa thin fa-user text-[20px]"></i>
+                                        </div>
+                                    <h1 class="ml-[10px] text-goldenrod mt-[10px] font-bold">USERS</h1>
+                                </div>
+    
+                                <div class="flex mb-[50px] justify-around mt-[20px] text-goldenrod">
+                                    <!-- Latest Registered Users  -->
+                                    <div>
+                                        <p class="font-bold">Latest Registered</p>
+                                        <h1>200</h1>
+                                    </div>
+                                    <!-- Total Users  -->
+                                    <div>
+                                        <p class="font-bold">Total Users</p>
+                                        <h1>1,387,870</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div id="userBorder" class="bg-blue-900 mt-[10px] shadow-md shadow-gray-900">
+                            <div class="w-[300px]">
+                                <div class="flex items-center ml-[10px]">
+                                        <div id="usericon1" class="flex truncate mt-[10px] border-2 rounded-full" >
+                                            <i class="usericon1 mx-auto fa thin fa-user text-[20px]"></i>
+                                        </div>
+                                    <h1 class="ml-[10px] text-goldenrod mt-[10px] font-bold">USERS</h1>
+                                </div>
+    
+                                <div class="flex mb-[50px] justify-around mt-[20px] text-goldenrod">
+                                    <!-- Latest Registered Users  -->
+                                    <div>
+                                        <p class="font-bold">Latest Registered</p>
+                                        <h1>200</h1>
+                                    </div>
+                                    <!-- Total Users  -->
+                                    <div>
+                                        <p class="font-bold">Total Users</p>
+                                        <h1>1,387,870</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="structure">
+                        <div id="userBorder" class="bg-blue-900 mt-[10px] shadow-md shadow-gray-900">
+                            <div class="w-[600px]">
+                                <div class="flex items-center ml-[10px]">
+                                        <div id="usericon1" class="flex truncate mt-[10px] border-2 rounded-full" >
+                                            <i class="usericon1 mx-auto fa thin fa-user text-[20px]"></i>
+                                        </div>
+                                    <h1 class="ml-[10px] text-goldenrod mt-[10px] font-bold">ACCOUNT DETAILS</h1>
+                                </div>
+    
+                                <div class="flex mb-[50px] justify-around mt-[20px] text-goldenrod allAccountInfo">
+                                    <!-- ACCOUNT DETAILS -->
+                                    <div id="accCuston">
+                                        <button>Customize Your Account</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="myHider">
+                        <div class="cancleAcc">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                        <div class="accContainer">
+                            <!-- <div class="flex gap-5 mb-[30px] accountOH"> -->
+                                <!-- <div>
+                                    <h1 class="accName">Account Name</h1>
+                                    <p class="accNo">Account Number</p>
+                                    <p class="bankName">bank name</p>
+                                </div> -->
+                                <!-- <div class="gap-3"> -->
+        
+                                    <!-- <a href="accEdit.html?id=${taskID}"><i class="fa-solid fa-pen-to-square"></i></a>
+        
+                                    <a href="accCreate.html?id=${taskID}"><i class="fa-solid fa-plus"></i></a>
+                                    
+                                    <a data-id="${taskID}"><i class="fa-solid fa-trash"></i></a> -->
+                                <!-- </div> -->
+                            <!-- </div> -->
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="structure gap-5">
+
+                    <div id="userBorderSpecial" class="bg-blue-900 mt-[10px] shadow-md shadow-gray-900">
+                        <div class="w-[300px]">
+                            <div class="flex items-center ml-[10px]">
+                                    <div id="usericon1" class="flex truncate mt-[10px] border-2 rounded-full" >
+                                        <img src="/TCHIBO1/logo.png" alt="">
+                                    </div>
+                                <h1 class="ml-[10px] text-goldenrod mt-[10px] font-bold">Tchibo</h1>
+                            </div>
+
+                            <div id="theCreateProductSection" class="font-bold">
+                                <h2 class="text-center createH">Create Product</h2>
+                                <!-- TS02
+                                Price: 1500
+                                Daily Income: 75
+                                Days: 30
+                                Total Income: 2250 -->
+                                <div class="createEditWidth">
+
+                                    <!-- THE NAME SECTION  -->
+                                    <!-- <div class="justify-between flex">
+                                        <label for="" class="heads">Name: </label><input type="text" name="pname" placeholder="Input product name" class="inputField">
+                                    </div> -->
+
+                                    <!-- THE PRICE SECTION  -->
+                                    <!-- <div class="justify-between flex mt-[5px]">
+                                        <label for="">Price: </label><input type="text" name="pprice" placeholder="Input product price" class="inputField">
+                                    </div> -->
+                                    <!-- THE INCOME SECTION  -->
+                                    <!-- <div class="justify-between flex mt-[5px]">
+                                        <label for="">Income:</label><input type="text" name="dailyIncome" placeholder="Input daily income" class="inputField">
+                                    </div> -->
+
+                                    <div class="bg-goldenrod flex mt-[10px] createBtn shadow-md shadow-gray-900">
+                                        <div class="ml-[10px]">
+                                            <i class="fa fa-cart-plus"></i>
+                                        </div>
+                                        <button type="submit" name="createBtn" class="createProductBtn">Create</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="theInitialProductSection">
+                                <div class="flex mt-[20px] arrowDown1">
+                                    <i class="fa fas fa-arrow-down mx-auto"></i>
+                                </div>
+                                <div class="flex bg-goldenrod mt-[20px] editProductInitial shadow-md shadow-gray-900">
+                                    <div class="ml-[10px]">
+                                        <i class="fa fas fa-pen-to-square"></i>
+                                    </div>
+                                    <h1 class="editProducth1 font-bold">Edit Product</h1>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div id="userBorder" class="bg-blue-900 mt-[10px] shadow-md shadow-gray-900">
+                        <div class="w-[320px] md:w-[300px]">
+                            <div class="flex items-center ml-[10px]">
+                                <div id="usericon1" class="flex truncate mt-[10px] border-2 rounded-full" >
+                                    <img src="/TCHIBO1/logo.png" alt="">
+                                </div>
+                                <h1 class="ml-[10px] text-goldenrod mt-[10px] font-bold">Tchibo</h1>
+                            </div>
+
+                            <div class="flex mb-[50px] mt-[20px] text-goldenrod">
+                                <!-- Delete Products -->
+                                <div class="deleteProductBtn shadow-md shadow-gray-900">
+                                    <h1 class="font-bold">DELETE PRODUCT</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>     
+        </section>
+
+         <!-- The Edit Section  -->
+
+        <section class="editSectionView w-[100%] overflow-scroll">
+            <div id="x">X</div>
+            <div class="deleting mx-auto justify-center mt-[80px] w-[500px] rounded-[12px]">
+                <!-- <div class="eachProduct flex items-center justify-around border-b-2 border-blue-900">
+                    <div class="flex-shrink-0">
+                        <img class="w-[50px]" src="/TCHIBO1/product1.png" alt="">
+                    </div>
+                    <div class="flex-shrink-0">
+                        <h1 class="font-bold">name: TS01</h1>
+                    </div>
+                    <div class="flex-shrink-0 trashIcon text-red-800">
+                        <i class="fa-solid fa-trash"></i>
+                    </div>
+                </div>
+                <div class="eachProduct flex items-center justify-around border-b-2 border-blue-900">
+                    <div class="flex-shrink-0">
+                        <img class="w-[50px]" src="/TCHIBO1/product1.png" alt="">
+                    </div>
+                    <div class="flex-shrink-0">
+                        <h1 class="font-bold">name: TS01</h1>
+                    </div>
+                    <div class="flex-shrink-0 trashIcon text-red-800">
+                        <i class="fa-solid fa-trash"></i>
+                    </div>
+                </div>
+
+                <div class="eachProduct flex items-center justify-around border-b-2 border-blue-900">
+                    <div class="flex-shrink-0">
+                        <img class="w-[50px]" src="/TCHIBO1/product1.png" alt="">
+                    </div>
+                    <div class="flex-shrink-0">
+                        <h1 class="font-bold">name: TS01</h1>
+                    </div>
+                    <div class="flex-shrink-0 trashIcon text-red-800">
+                        <i class="fa-solid fa-trash"></i>
+                    </div>
+                </div> -->
+            </div>
+
+
+
+        </section>
+        
+        
+    </div>
+    <script src="admin.js"></script>
+    <script src="accNo.js"></script>
+</body>
+</html>

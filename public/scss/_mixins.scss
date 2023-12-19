@@ -1,0 +1,19 @@
+@mixin transitionGen($num: all, $dur: 1.5s) {
+  transition: #{$num} #{$dur} ease;
+}
+@mixin transitionCard() {
+  transition: all 0.3s ease;
+}
+@mixin shadowTransition() {
+  box-shadow: $borderShadowCards1;
+  @include transitionCard();
+  &:hover {
+    box-shadow: $borderShadowCards2;
+  }
+}
+
+@mixin moveLeft(){
+  .moveLeft{
+    transform: translateX(0%) !important;
+  }
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/src/input.css">
+    <link rel="stylesheet" href="../fontawesome-free-6.4.2-web/css/all.min.css">
+    <title>TCHIBO admin dashboard</title>
+</head>
+<body class="bg-blue-600 mx-auto">
+    <div id="generalDivss" class="flex justify-between mx-auto">
+
+        <!-- SIDEBAR -->
+        <div class="notusedDiv">
+            <div class="hidden sm:w-0 w-[20%] md:flex flex-col bg-blue-900 h-[100vh] absolute top-0 left-0">
+            <!-- ADMIN ICON  -->
+            <div class="flex truncate mx-auto mt-[80px] border-dimGold border-4 rounded-full w-[80px] h-[80px] relative" >
+                <i class="mx-auto mt-[10px] fa thin fa-user text-dimGold text-[65px]"></i>
+            </div>
+            <div class="text-dimGold border-dimGold border-2 mt-[20px] hover:bg-dimGold hover:text-black">
+                <h1 class="text-center">Cashout</h1>
+            </div>
+
+            <div class="text-dimGold border-dimGold border-2 mt-[20px] hover:bg-dimGold hover:text-black">
+                <h1 class="text-center">Reg Users:<span>100</span></h1>
+            </div>
+
+            <div class="text-dimGold border-dimGold border-2 mt-[20px] hover:bg-dimGold hover:text-black">
+                <h1 class="text-center">Setting</h1>
+            </div>
+
+            <div class="text-dimGold border-dimGold border-2 mt-[20px] hover:bg-dimGold hover:text-black">
+                <h1 class="text-center">Logout</h1>
+            </div>
+
+        </div>
+        </div>
+        
+
+        <!-- MAIN BAR -->
+        <div class="notusedDiv">
+            <div id="mainBar" class="sm:left-0 md:flex w-[79%] bg-blue-900 h-[200vh] absolute top-0 right-0 justify-around mx-auto">
+           
+            <div id="main-bar1" class="mt-[80px]">
+
+                <!-- THE USER AND REQUEST SECTION  -->
+                <div class="flex gap-5">
+                    <!-- USERS  -->
+                    <div>
+                        <div class="flex w-[80px] h-[80px] bg-dimGold rounded-full items-center justify-center shadow-md shadow-gray-900">
+                            <h1 class="text-center font-bold text-[30px]">92</h1>
+                        </div>
+                        <h1 class="text-center mt-[5px] text-dimGold font-bold shadow-md shadow-gray-900">USERS</h1>
+                    </div>
+
+                    <!-- REQUEST  -->
+                    <div>
+                        <div class="flex w-[80px] h-[80px] bg-dimGold rounded-full items-center justify-center shadow-md shadow-gray-900">
+                            <h1 class="text-center font-bold text-[30px]">100</h1>
+                        </div>
+                        <h1 class="text-center mt-[5px] text-dimGold font-bold shadow-md shadow-gray-900">REQUEST</h1>
+                    </div>
+                </div>
+
+                <!-- THE EDIT AND CREATE SECTION  -->
+                <div class="flex gap-5 mt-[20px]">
+
+                    <!-- CREATE PRODUCT  -->
+                    <div class="w-[80px] h-[269px] bg-dimGold flex items-center rounded-[12px] shadow-md shadow-gray-900">
+                        <h1 class="text-center font-bold">Create Product</h1>
+                    </div>
+
+                    <div class="w-[80px] h-[269px] bg-dimGold flex items-center rounded-[12px] shadow-md shadow-gray-900">
+                        <h1 class="text-center font-bold">Edit Product</h1>
+                    </div>
+                </div>
+
+                <div class="flex gap-5 mt-[20px]">
+                    <div class="w-[180px] h-[100px] bg-red-800 flex items-center justify-center rounded-[12px] shadow-md shadow-gray-900">
+                       <h1 class="text-center font-bold">Delete Product</h1> 
+                    </div>   
+                </div>
+
+            </div>
+
+            <div id="main-bar2" class="m-20 mx-auto">
+
+                <div class="w-[400px] h-[100px] p-8 bg-dimGold flex items-center justify-center rounded-[12px] shadow-md shadow-gray-900 mx-auto">
+                    <h1 class="text-center font-bold">Total Deposite:<span><i class="fa-solid fa-naira-sign"></i>200,000</span></h1>
+                </div>
+
+                <div class=" h-[60vh] mt-[20px] p-8 bg-dimGold flex justify-center rounded-[12px] shadow-md shadow-gray-900">
+                    <h1 class="text-center font-bold">Latest Registered Users</h1>
+                    <ul></ul>
+                </div>
+            </div>
+            
+            <div id="main-bar3">
+                <div class=" h-[30vh] mt-[80px] p-8 bg-dimGold flex justify-center rounded-[12px] shadow-md shadow-gray-900">
+                    <h1 class="text-center font-bold">Top 5 Investors</h1>
+                </div>
+
+                <div class=" h-[45vh] mt-[20px] p-8 bg-dimGold flex justify-center rounded-[12px] shadow-md shadow-gray-900">
+                    <h1 class="text-center font-bold">Confirmed Withdrawal</h1>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+
+    </div>
+</body>
+</html>

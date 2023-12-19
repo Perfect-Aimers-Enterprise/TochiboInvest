@@ -1,0 +1,125 @@
+// Custom.scss
+
+// scss-docs-start import-stack
+// Configuration
+@import "../../node_modules/bootstrap/scss/functions";
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 670px,
+  md: 850px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/variables-dark";
+
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/utilities";
+
+// Layout & components
+@import "../../node_modules/bootstrap/scss/root";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/containers";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/tables";
+@import "../../node_modules/bootstrap/scss/buttons";
+@import "../../node_modules/bootstrap/scss/transitions";
+@import "../../node_modules/bootstrap/scss/dropdown";
+@import "../../node_modules/bootstrap/scss/button-group";
+@import "../../node_modules/bootstrap/scss/pagination";
+@import "../../node_modules/bootstrap/scss/alert";
+@import "../../node_modules/bootstrap/scss/list-group";
+@import "../../node_modules/bootstrap/scss/close";
+@import "../../node_modules/bootstrap/scss/modal";
+@import "../../node_modules/bootstrap/scss/spinners";
+@import "../../node_modules/bootstrap/scss/offcanvas";
+@import "../../node_modules/bootstrap/scss/placeholders";
+
+// Helpers
+@import "../../node_modules/bootstrap/scss/helpers";
+
+// Utilities
+@import "../../node_modules/bootstrap/scss/utilities/api";
+// scss-docs-end import-stack
+
+
+// Import Variables
+@import "variables";
+
+
+// Import Mixins
+@import "mixins";
+
+// Import Side Bar
+@import "sideBar";
+
+// Import Modal
+@import "modal";
+
+// Import Custom Table
+@import "custom-table"; 
+
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  //   width: 100vw;
+  overflow-x: hidden !important;
+  background-color: $backForeColor;
+
+  @include media-breakpoint-down(sm){
+    font-size: 14px;
+  }
+}
+.row {
+  margin-inline: 0;
+}
+
+.faqsSec{
+    margin-left: 213px;
+    min-height: 100vh;
+    @include transitionGen();
+    @include media-breakpoint-down(md) {
+        margin-left: 0px;
+     }
+
+    &>section.faqSec{
+      .faqHolder{
+        border: 2px $logoBlue solid;
+
+        .faqQ{
+          font-weight: bold;
+          background-color: $logoBlue;
+          color: white;
+          span{
+            font-size: 1.1em
+          }
+
+          &:after{
+            display: block;
+            float: right;
+            content:"\25BC";
+            font-size: .9em;
+          }
+        }
+        .faqA{
+          @include shadowTransition();
+          margin:1rem;
+          border-radius: 5px;
+          padding: 1rem;
+        }
+      }
+    }
+    }
+
+    .mWidth-1000{
+      max-width: 1000px;
+    }

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/input.css">
+    <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css" integrity="sha512-siarrzI1u3pCqFG2LEzi87McrBmq6Tp7juVsdmGY1Dr8Saw+ZBAzDzrGwX3vgxX1NkioYNCFOVC0GpDPss10zQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <title>Create Product</title>
+</head>
+<body>
+    <!-- CREATE SECTION  -->
+
+    <form enctype="multipart/form-data" method="POST" action="/api/v1/products/upload" class="createSectionDiv w-[100%] h-screen">
+        <div class="flex justify-center align-center">
+            <div class="all">
+                <div id="imageUploadForm">
+                    <input type="file" name="image" accept="image/*">
+                    <!-- <button type="submit">Upload Image</button> -->
+                </div>
+                <div>
+                    <label for="">Name: </label>
+                    <input type="text" name="name" placeholder="Insert Product Name">
+                </div>
+                <div>
+                    <label for="">Price: </label>
+                    <input type="text" name="price" placeholder="Insert Product Price">
+                </div>
+                <div>
+                    <label for="">DailyIncome: </label>
+                    <input type="text" name="dailyIncome" placeholder="Insert Product DailyIcome">
+                </div>
+                <div>
+                    <label for="">Days: </label>
+                    <input type="text" name="days" placeholder="Insert Product Day">
+                </div>
+                <div>
+                    <label for="">TotalIcome: </label>
+                    <input type="text" name="totalIcome" placeholder="Insert Product TotalIncome">
+                </div>
+                <button class="submit" type="submit">Submit</button>
+                <a href="admin2.html" id="backward" class="flex mt-[10px] border-2 border-gray-700 rounded-full">   
+                    <!-- <i class="fa fas fa-backward"></i> -->
+                    <p class="font-bold"><<< back</p>
+                </a>
+
+            </div>
+        </div>
+    </form>
+
+    <script src="admin.js"></script>
+</body>
+</html>

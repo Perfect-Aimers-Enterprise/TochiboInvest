@@ -1,0 +1,38 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.formDiv{
+    margin: auto;
+    width: 100%;
+    max-width: 400px;
+    border: 2px solid black;
+    padding: 20px;
+    margin-top: 15%;
+    border-radius: 12px;
+}
+
+.formDiv div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.formDiv div input{
+    outline: none;
+}
+
+.submit{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: black;
+    color: #fff;
+    padding: 5px;
+}
+.backward{
+    margin-top: 10px;
+}
+.backward a i {
+    color: black;
+}

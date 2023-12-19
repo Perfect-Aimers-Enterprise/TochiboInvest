@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="./css/faqs.css" />
+    <link rel="stylesheet" href="fontAwesome/css/all.min.css" />
+    <link rel="icon" href="assests/img/logo.png" type="image/x-icon">
+    <script defer  src="./js/bootstrap.js"></script>
+    <script defer  src="./js/general.js"></script>
+
+    <title>faqs</title>
+  </head>
+  <body>
+
+
+    <div class="bodyOverlay d-none"></div>
+
+   <div class="platform">
+
+
+                <!--The Fix Positioned Sidebar -->
+
+
+    <!-- For phone Size -->
+    <nav class="forPhones d-md-none">
+        <div>
+            <button class="showMenu text-white"><span class="fas fa-bars"></span></button>
+            <a href="">Frequently Asked Questions<span></span></a>
+            <a class="nLetters" href="">MO</a>
+        </div>
+    </nav>
+
+    <!-- Normal View -->
+    <div class="navContainer d-flex position-fixed z-2 align-items-start">
+            <div class=" vh-100 sideBar overflow-hidden  start-0 top-0 z-2" id="navbarCus1">
+
+            <div class="row row-cols-1">
+                    <div class="col">
+                            <div class="logo"><img src="./assests/img/logo.png" alt="" class="w-100"></div>
+                        </div>
+                    </div>
+
+                        <div class="sideBarLinks overflow-hidden py-4 row col row-cols-1 h-50 align-content-around text-muted ps-0">
+                            <div class="col"><a href="index.html" class="sideBarText"><span><i class="fas fa-house-user"></i></span>Dashboard</a></div>
+                            <div class="col "><a class="sideBarText" href="products.html"><span><i class="fa-solid fa-bicycle"></i></span>Products</a></div>
+                            <div class="col "><a class="sideBarText" href="deposit.html"><span><i class="fas fas fa-sign-in-alt"></i></span>Deposit</a></div>
+                            <div class="col"><a class="sideBarText" href="withdrawal.html"><span><i class="fas fas fa-sign-out-alt active"></i></span>Withdrawal</a></div>
+                            <div class="col"><a href="referrals.html" class="sideBarText"><span><i class="fa-solid fa-users"></i></span>Referrals</a></div>
+                            <div class="col active"><a class="sideBarText"><span><i class="fas fa-question active"></i></span>FAQS</a></div>
+                            <div class="col " ><a class="sideBarText text-danger text-decoration-none" data-bs-toggle="modal" data-bs-target="#logoutModal"><span><i class="fas fa-power-off"></i></span>Logout</a></div>
+                        </div>
+            </div>
+
+            <button class="d-md-none btn-close btn-close-white mx-3 mt-3 fs-4 border hideNavbar"></button>
+    </div>
+
+
+            <section class="modal cLogOutModalWarn " id="logoutModal">
+                <div class="modal-dialog">
+
+                    <div class="modal-content" >
+                        <div class="modal-heading">
+                            
+                            <h1 class="text-center"><span class="rounded-circle">?</span></h1>
+                        </div>
+
+                        <div class="modal-body text-center">
+                            <span class="fs-5 fw-bold logoutTextHF">Tochibo Portal</span> <br>
+                            Are you sure you want to signout? <br> <br>
+                            <a class="btn btn-danger" href="./authenticate-signIn.html">Yes!</a> <a class="btn cancel-btn" data-om-dismiss="modal" type="button">Cancel</a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+
+            <section class="faqsSec p-3">
+
+                <section class="faqSec mt-5">
+                    <div class="faqHolder m-auto mWidth-1000 mb-3 rounded-1" >
+                        <div class="faqQ px-2" data-bs-target="#faq1" data-bs-toggle="collapse"> <span>How Do I Withdraw?</span></div>
+                        <div class="faqA px-3 collapse show" id="faq1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas distinctio, quam temporibus hic blanditiis doloribus perspiciatis in quaerat eveniet nesciunt ducimus omnis quasi, rem dolores assumenda minus suscipit id. Deleniti cupiditate sint, vero dolorum doloribus maxime saepe voluptatem doloremque totam?</div>
+                    </div>
+                </section>
+
+                <section class="faqSec">
+                <div class="faqHolder m-auto mWidth-1000 mb-3 rounded-1" >
+                        <div class="faqQ px-2" data-bs-target="#faq2" data-bs-toggle="collapse"> <span>How do I Deposit?</span></div>
+                        <div class="faqA px-3 collapse" id="faq2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias aspernatur doloremque hic optio, corporis voluptas omnis veritatis est placeat laudantium mollitia saepe illum quasi assumenda esse corrupti vel. Repellendus, obcaecati.</div>
+                    </div>
+                </section>
+
+                <section class="faqSec">
+                 <div class="faqHolder m-auto mWidth-1000 mb-3 rounded-1" >
+                        <div class="faqQ px-2" data-bs-target="#faq3" data-bs-toggle="collapse"> <span>How do I Earn?</span></div>
+                        <div class="faqA px-3 collapse" id="faq3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus tempora sequi nostrum incidunt odio illo exercitationem aut! Dolorem quia molestias illo possimus officia aliquam quis esse illum. Ullam, obcaecati quibusdam.</div>
+                    </div>
+                </section>
+
+            </section>
+
+           
+
+</body>
+</html>

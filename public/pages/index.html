@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" xintegrity="sha384-fz5P8oV2BHK78XHA9SYAAstYZuHPL7w9gC1rflUnHlyInVE4eZupz4eYV9R+5pnq" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/user_dashboard.css">
+    <link rel="icon" href="assests/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="fontAwesome/css/all.min.css">
+    <script src="./js/bootstrap.js" defer></script>
+    <script defer  src="./js/general.js"></script>
+    <script defer  src="./js/index.js"></script>
+
+    <title>User DashBoard</title>
+</head>
+<body>
+
+            <div class="loader d-none position-fixed top-0 z-3">
+            <div class='loader-img '><img class=" img-fluidCus" src="./assests/svg/loader3-1s-200px.svg" alt="" srcset=""></div>
+            
+        </div>
+
+
+
+        <div class="bodyOverlay d-none"></div>
+
+                <!--The Fix Positioned Sidebar -->
+
+    <!-- For phone Size -->
+    <nav class="forPhones d-md-none">
+        <div>
+            <button class="showMenu text-white"><span class="fas fa-bars"></span></button>
+            <a href="">User Dashboard<span></span></a>
+            <a title="Your name" class="nLetters" href=""></a>
+        </div>
+    </nav>
+
+    <!-- Normal View -->
+    <div class="navContainer d-flex position-fixed z-2 align-items-start">
+            <div class=" vh-100 sideBar overflow-hidden  start-0 top-0 z-2" id="navbarCus1">
+
+            <div class="row row-cols-1">
+                    <div class="col">
+                            <div class="logo"><img src="./assests/img/logo.png" alt="" class="w-100"></div>
+                        </div>
+                    </div>
+
+                        <div class="sideBarLinks overflow-hidden py-4 row col row-cols-1 h-50 align-content-around text-muted ps-0">
+                            <div class="col active"><a class="sideBarText" href="user_dashboard.html"><span><i class="fas fa-house-user"></i></span>Dashboard</a></div>
+                            <div class="col "><a class="sideBarText" href="products.html"><span><i class="fa-solid fa-bicycle"></i></span>Products</a></div>
+                            <div class="col"><a class="sideBarText" href="deposit.html"><span><i class="fas fas fa-sign-in-alt"></i></span>Deposit</a></div>
+                            <div class="col"><a class="sideBarText" href="withdrawal.html"><span><i class="fas fas fa-sign-out-alt"></i></span>Withdrawal</a></div>
+                            <div class="col"><a href="referrals.html" class="sideBarText"><span><i class="fa-solid fa-users"></i></span>Referrals</a></div>
+                            <div class="col"><a class="sideBarText" href="faqs.html"><span><i class="fas fa-question active"></i></span>FAQS</a></div>
+                            <div class="col " ><a class="sideBarText text-danger text-decoration-none" data-bs-toggle="modal" data-bs-target="#logoutModal"><span><i class="fas fa-power-off"></i></span>Logout</a></div>
+                        </div>
+            </div>
+
+            <button class="d-md-none btn-close btn-close-white mx-3 mt-3 fs-4 border hideNavbar"></button>
+    </div>
+
+            
+
+            <section class="modal cLogOutModalWarn " id="logoutModal">
+                <div class="modal-dialog">
+
+                    <div class="modal-content" >
+                        <div class="modal-heading">
+                            
+                            <h1 class="text-center"><span class="rounded-circle">?</span></h1>
+                        </div>
+
+                        <div class="modal-body text-center">
+                            <span class="fs-5 fw-bold logoutTextHF">Tochibo Portal</span> <br>
+                            Are you sure you want to signout? <br> <br>
+                            <a class="btn btn-danger" href="./authenticate-signIn.html">Yes!</a> <a class="btn cancel-btn" data-om-dismiss="modal" type="button">Cancel</a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+
+
+
+
+
+            <div class="row body-dom mt-0 pt-5 pt-md-2 g-5"> 
+
+                    <!--Banner-->
+                        <div class="col-12 mt-3 collapse show" id="banner">
+                            <div class="welcome p-5 py-4">
+                                <span class="welcome fw-bolder ">Welcome back <span class="fiName">John!</span></span>
+                                <span class="findInfo lead"><br>Supercharge your earning potential by exploring our latest products <br>and boosting your income on Tchibo</span><br><br><span class="hide_banner"><span class="">
+                                    <span class="hideX" data-bs-toggle="collapse" data-bs-target="#banner"><i class="fas fa-x"></i></span><span class="hide">Hide banner</span></span></span>
+                            </div>    
+                        </div> 
+
+                        <!--Account Credentials-->
+
+                    <section class="ACredentials mt-2 mt-md-5">
+                    <div class="ACredentials col border border-2 rounded-4 border-logoBorder">
+
+                    <div class="title col-12  " data-bs-target="#accountCredentials" data-bs-toggle="collapse"><span class="fw-bold d-flex fs-5">Account Credentials</span></div>
+
+
+
+                    <div class="row row-cols-sm-2 row-cols-lg-3 infoDiv collapse show" id="accountCredentials">
+                        <div class="col-sm-12 name">
+                            <div class="col-contain-name d-flex mt-4 p-2 ps-4">
+                                <div class="profileImage flex-basis-50"><img class="img-fluid" src="./assests/img/60111.jpg" alt=""></div>
+                                <div class="detail1"><span class="name">Name</span><br><span class="name-detail">Zach John</span></div>
+                            </div>
+                        </div>
+
+                        <div class=" col-12 name">
+                            <div class="col-contain-id d-flex mt-4 p-4 ps-4">
+                                <div class="iconCustom flex-basis-50">
+                                    <span><i class="conceptIcons fas fa-at"></i></span>
+                                </div>
+                                <div class="detail">
+                                    <span class="Referral Code">Email</span><br><span class="email-detail">
+                                    zachjohn@gmail.com
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class=" col-12 name">
+                            <div class="col-contain-id d-flex mt-4 p-4 ps-4">
+                                <div class="iconCustom flex-basis-50">
+                                    <span><i class="conceptIcons fa-solid fa-id-card"></i></span>
+                                </div>
+                                <div class="detail">
+                                    <span class="Referral Code">ID/Referral Code</span><br><span class="referral-code">
+                                    rte45kandz
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+ 
+                    </div>
+                        </div>
+                        </section>
+
+                        <!--Financal Summary-->
+                        <section class="FOverview ">
+                    <div class=" col border border-2 rounded-4 border-logoBorder">
+
+                    <div class="title col-12  " data-bs-target="#fSummary" data-bs-toggle="collapse"><span class="fw-bold d-flex fs-5">Financial Summary</span></div>
+
+
+
+                    <div class="row row-cols-sm-2 infoDiv collapse show row-cols-lg-3" id="fSummary">
+
+                        <div class=" col-12 ">
+                            <div class="col-contain-account-val d-flex mt-4 p-4 ps-4">
+                                <div class="profileImage flex-basis-50">                                    
+                                <span><i class="conceptIcons fa-solid fa-cash-register"></i></span></div>
+                                <div class="detail1"><span class="name">Total Account Value</span><br><span class="fs-total">$5000</span></div>
+                            </div>
+                        </div>
+
+                        <div class=" col-12">
+                            <div class="col-contain-investment d-flex mt-4 p-4 ps-4">
+                                <div class="customIcon flex-basis-50">                                    
+                                    <span><i class="conceptIcons fa-solid fa-cash-register"></i></span></div>
+                                <div class="detail1"><span class="investment">Total Invested</span><br><span class="fs-invest">$2000</span></div>
+                            </div>
+                        </div>
+
+                        <div class=" col-12 name">
+                            <div class="col-contain-availFunds d-flex mt-4 p-4 ps-4">
+                                <div class="customIcon flex-basis-50">
+                                    <span><i class="conceptIcons fa-solid fa-wallet"></i></span></div>
+                                <div class="detail1"><span class="name">Available Funds</span><br><span class="fs-avail">$3000</span></div>
+                            </div>
+                        </div>
+
+                        <div class=" col-12 name col-lg-6">
+                            <div class="col-contain-availFunds d-flex mt-4 p-4 ps-4">
+                                <div class="customIcon flex-basis-50">
+                                    <span><i class="conceptIcons fab fa-product-hunt"></i></span></div>
+                                <div class="detail1"><span class="name">Purchase Count</span><br><span class="fs-pCount">0</span></div>
+                            </div>
+                        </div>
+
+                        <div class=" col-sm-12 col-lg-6 name">
+                            <div class="col-contain-earningRate d-flex mt-4 p-4 ps-4">
+                                <div class="customIcon flex-basis-50">
+                                    <span><i class="conceptIcons fa-solid fa-money-bill-trend-up"></i></span></div>
+                                <div class="detail1"><span class="name">Earning Rate</span><br><span class="name-detail">$2 per hour</span></div>
+                            </div>
+                        </div>
+                    </div>
+                        </div>
+                        </section>
+
+
+                        <!--Referral Section-->
+
+                    <section>
+
+                        <div class=" col border border-2 rounded-4 border-logoBorder">
+                                 <div class="title col-12 " data-bs-target="#referralTable" data-bs-toggle="collapse"><span class="fw-bold d-flex fs-5">Recent Referrals</span></div>  
+                        <div class="col-12 mb-4 collapse show infoDiv" id="referralTable" style="padding-inline:24px;">
+                        <div class="table-custom p-5 mt-4  table-responsive ">
+                        <table class="table table-hover table-borderless mb-0 align-middle">
+                                <thead>
+                                    <tr class="align-middle">
+                                        <th>S/N</th>
+                                        <th>Email</th>
+                                        <th>Team</th>
+                                        <th>Date</th>
+                                        <th>Total Invested</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody class="referralsInfo">
+                                    <!-- <tr>
+                                        <td>Micheal</td>
+                                        <td>Team A</td>
+                                        <td>5th of Jan, 2023</td>
+                                        <td>$200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Miracle</td>
+                                        <td>Team C</td>
+                                        <td>17th of Jul, 2021</td>
+                                        <td>$100</td>
+                                    </tr> -->
+                                </tbody>
+
+
+
+                            </table>
+                                <div class="noRef d-none" style="min-width:400px">
+                                    <div class="child">
+                                        You Have no referrals
+                                    </div>
+                                </div>
+                        </div>
+
+
+                        </div>
+
+                        </div>
+                    </section>
+                  
+
+            </div>
+            
+        </div>
+
+
+</body>
+</html>

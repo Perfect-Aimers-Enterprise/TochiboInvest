@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/input.css">
+    <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css" integrity="sha512-siarrzI1u3pCqFG2LEzi87McrBmq6Tp7juVsdmGY1Dr8Saw+ZBAzDzrGwX3vgxX1NkioYNCFOVC0GpDPss10zQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <title>Edit Product</title>
+</head>
+<body>
+    <form class="editSectionDiv w-[100%] h-screen">
+        <div class="flex justify-center align-center">
+            <div class="all">
+                <div class="taskIds"></div>
+                <div class="taskDom success failure"></div>
+                <div>
+                    <label for="">Name: </label>
+                    <input type="text" name="name" class="taskNameDom">
+                </div>
+                <div>
+                    <label for="">Price: </label>
+                    <input type="text" name="price" class="taskPriceDom">
+                </div>
+                <div>
+                    <label for="">DailyIncome: </label>
+                    <input type="text" name="dailyIncome" class="taskDailyIncomeDom">
+                </div>
+                <div>
+                    <label for="">Days: </label>
+                    <input type="text" name="days" class="taskDaysDom">
+                </div>
+                <div>
+                    <label for="">TotalIcome: </label>
+                    <input type="text" name="totalIcome" class="taskTotalIcomDom">
+                </div>
+                <button class="submit" type="submit">Submit</button>
+                <a href="admin2.html" id="backward" class="flex mt-[10px] border-2 border-gray-700 rounded-full">   
+                    <!-- <i class="fa fas fa-backward"></i> -->
+                    <p class="font-bold"><<< back</p>
+                </a>
+
+            </div>
+        </div>
+    </form>
+
+
+    <script src="edit.js"></script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @layer components {
+    .topDiv {
+        @apply flex truncate mt-[10px] border-2 rounded-full
+    }
+} */
+
+.hero__image{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.724), rgba(0, 0, 0, 0.724)), url("../TCHIBO1/IMG-20231016-WA0077.jpg") ;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+.here:active{
+    color: #fff;
+    transition:0.3s ease-out;
+    color: #a58842;
+}
+
+.here {
+    display: none; /* Hide all heres by default */
+}
+
+.here:nth-child(-n+3) {
+    display: grid; /* Display the first three heres */
+    /* flex-direction: column; */
+}
+#userBorder{
+    border-radius: 10px;
+    height: 150px;
+}
+#userBorderSpecial{
+    height: 310px;
+    border-radius: 10px;
+}
+#usericon1{
+    width: 30px;
+    height: 30px;
+    border-color: goldenrod;
+    color: goldenrod;
+}
+.usericon1{
+    font-size: 25px;
+    text-align: center;
+    margin-top: 4px;
+}
+.structure{
+    margin-inline: 50px;
+}
+.header{
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+#mainBar{
+    background: rgb(212, 227, 255);
+}
+@media(max-width: 680px){
+
+    #mainBar {
+        width: 100%;
+        left: 0;
+        /* background: red; */
+        height: 240vh;
+    }
+
+}
+#sideBar{
+    background: rgb(212, 227, 255);
+}
+#adminName h4{
+    color: darkblue;
+}
+.inputField{
+    background: transparent;
+    outline: none;
+    color: goldenrod;
+    border: 1px solid goldenrod;
+    border-style: dotted;
+}
+.createEditWidth input{
+    padding-inline: 5px;
+}
+.createEditWidth{
+    margin-inline: 10px;
+}
+.createEditWidth label{
+    color: #fff;
+}
+.createH{
+    color: #fff;
+}
+.createBtn{
+    border-radius: 5px;
+}
+#theCreateProductSection{
+    font-size: 14px;
+    cursor: pointer;
+}
+#theEditProductSection{
+    font-size: 14px;
+    margin-top: 30px;
+    /* display: none; */
+}
+#theInitialProductSection{
+    margin-inline: 10px;
+    cursor: pointer;
+    /* display: none; */
+}
+.arrowDown1{
+   font-size: 30px; 
+   color: #fff;
+}
+.editProductInitial{
+    border-radius: 5px;
+    margin-inline: 8px;
+    cursor: pointer;
+}
+.editProducth1{
+   margin-left: 60px;
+}
+.createProductBtn{
+    margin-left: 90px;
+}
+.editProductButton{
+    margin-left: 100px;
+}
+.deleteProductBtn{
+    background: darkred;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.deleteProductBtn h1{
+    text-align: center;
+}
+.editSectionView {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.724), rgba(0, 0, 0, 0.724));
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+    overflow-y: scroll;
+}
+.deleting {
+    background: #fff;
+    overflow-y: scroll;
+}
+.eachProduct{
+    justify-content: space-around;
+}
+.deleteicon{
+    font-style: italic;
+    font-size: 10px;
+    color: red;
+    cursor: pointer;
+}
+.createicon{
+    font-style: italic;
+    font-size: 10px;
+    color: green;
+    cursor: pointer;
+}
+
+.editicon{
+    font-style: italic;
+    font-size: 10px;
+    color: orange;
+    cursor: pointer;
+}
+
+.createSectionDiv{
+    top: 0;
+    right: 0;
+    width: 100%;
+}
+.all{
+    margin-top: 170px;
+}
+.all div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.all input{
+    outline: none;
+    border-bottom: 1px solid darkblue;
+}
+.all button {
+    background: black;
+    color: aliceblue;
+    padding: 5px;
+    border-radius: 6px;
+}
+.all .submit {
+    margin-top: 10px;
+    /* margin-left: 35%; */
+    width: 100%;
+}
+.all .submit:active {
+    background: darkblue;
+    transition: 0.1s ease-out;
+}
+#backward{
+    display: flex;
+    width: 30%;
+    cursor: pointer;
+}
+#backward:hover{
+    background: red;
+    color: #fff;
+}
+#x{
+    color: #fff;
+    font-size: 30px;
+    margin: 40px;
+    cursor: pointer;
+}
+.success {
+    color:  green;
+    font: bold;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+.failure{
+    color: red;
+    font: bold;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+.accountOH{
+    justify-content: space-between;
+}
+.myHider{
+    background: linear-gradient(rgba(8, 2, 2, 0.888), rgba(14, 7, 7, 0.724));
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+    color: #fff;
+    /* text-align: center; */
+    padding: 100px 0 100px 0;
+    display: none;
+}
+.accContainer{
+    background: green;
+    /* margin-top: 20%; */
+    max-width: 400px;
+    max-height: 100vh;
+    padding: 20px;
+    margin: auto;
+    border-radius: 12px;
+    /* text-underline-offset: 12px; */
+}
+#accCuston{
+    background: goldenrod;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    color: #000;
+}
+
+.cancleAcc{
+    margin-left: 20px;
+    cursor: pointer;
+}

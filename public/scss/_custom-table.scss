@@ -1,0 +1,31 @@
+.table-custom {
+  box-shadow: $borderShadowCards1;
+  @include shadowTransition();
+  border-radius: 5px;
+
+  table {
+    border-radius: 10px;
+
+    tr > :nth-child(3) {
+      min-width: 142px;
+    }
+  }
+
+  td,
+  th {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  tr:nth-of-type(odd) > td {
+    background-color: rgb(208, 229, 250);
+
+    :hover {
+    }
+  }
+
+  thead tr th {
+    background-color: tint-color($tableHeader, 20%);
+    color: white;
+  }
+}

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="./css/deposit.css" />
+    <link rel="stylesheet" href="fontAwesome/css/all.min.css" />
+    <link rel="icon" href="assests/img/logo.png" type="image/x-icon">
+    <script defer  src="./js/bootstrap.js"></script>
+    <script defer  src="./js/general.js"></script>
+
+    <title>Deposit</title>
+  </head>
+  <body>
+
+    <div class="bodyOverlay d-none"></div>
+   <div class="platform">
+
+
+                <!--The Fix Positioned Sidebar -->
+
+
+    <!-- For phone Size -->
+    <nav class="forPhones d-md-none">
+        <div>
+            <button class="showMenu text-white"><span class="fas fa-bars"></span></button>
+            <a href="">Deposit<span></span></a>
+            <a class="nLetters" href="">MO</a>
+        </div>
+    </nav>
+
+    <!-- Normal View -->
+    <div class="navContainer d-flex position-fixed z-2 align-items-start">
+            <div class=" vh-100 sideBar overflow-hidden  start-0 top-0 z-2" id="navbarCus1">
+
+            <div class="row row-cols-1">
+                    <div class="col">
+                            <div class="logo"><img src="./assests/img/logo.png" alt="" class="w-100"></div>
+                        </div>
+                    </div>
+
+                        <div class="sideBarLinks overflow-hidden py-4 row col row-cols-1 h-50 align-content-around text-muted ps-0">
+                            <div class="col"><a href="index.html" class="sideBarText"><span><i class="fas fa-house-user"></i></span>Dashboard</a></div>
+                            <div class="col "><a class="sideBarText" href="products.html"><span><i class="fa-solid fa-bicycle"></i></span>Products</a></div>
+                            <div class="col active"><a class="sideBarText"><span><i class="fas fas fa-sign-in-alt"></i></span>Deposit</a></div>
+                            <div class="col"><a class="sideBarText" href="withdrawal.html"><span><i class="fas fas fa-sign-out-alt active"></i></span>Withdrawal</a></div>
+                            <div class="col"><a href="referrals.html" class="sideBarText"><span><i class="fa-solid fa-users"></i></span>Referrals</a></div>
+                            <div class="col"><a class="sideBarText" href="faqs.html"><span><i class="fas fa-question active"></i></span>FAQS</a></div>
+                            <div class="col " ><a class="sideBarText text-danger text-decoration-none" data-bs-toggle="modal" data-bs-target="#logoutModal"><span><i class="fas fa-power-off"></i></span>Logout</a></div>
+                        </div>
+            </div>
+
+            <button class="d-md-none btn-close btn-close-white mx-3 mt-3 fs-4 border hideNavbar"></button>
+    </div>
+
+
+            <section class="modal cLogOutModalWarn " id="logoutModal">
+                <div class="modal-dialog">
+
+                    <div class="modal-content" >
+                        <div class="modal-heading">
+                            
+                            <h1 class="text-center"><span class="rounded-circle">?</span></h1>
+                        </div>
+
+                        <div class="modal-body text-center">
+                            <span class="fs-5 fw-bold logoutTextHF">Tochibo Portal</span> <br>
+                            Are you sure you want to signout? <br> <br>
+                            <a class="btn btn-danger" href="./authenticate-signIn.html">Yes!</a> <a class="btn cancel-btn" data-om-dismiss="modal" type="button">Cancel</a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+
+
+            <section class="depositSec pt-3 px-3">
+
+                <div class=" alert alert-dismissible withdrawalAlert  fade show m-auto mt-5" id="withdrawalNoti" style="max-width: 1000px; font-size: 1.1em">
+                    <button class="btn-close" data-bs-dismiss="alert"></button>
+                    <strong>Important!</strong>
+                    Before completing the deposit from, kindly ensure payments are made to the designated bank account details provided below for a seamless transaction experience.
+                </div>
+
+                <div class="depositSec_con row pb-3 rounded-2  m-auto mt-3" style="max-width: 1000px;">
+                    <h2 class="text-center">Merchants</h2>
+
+                    <div class="specific_bank mb-4">
+                            <div class="bank_name col-12 col-md-12 col-lg-12 fw-bold py-1" data-bs-toggle="collapse" data-bs-target="#AccessB">Access Bank</div>
+
+                            <div class="bank_accounts row row-cols-xl-4 row-cols-lg-3 row-cols-sm-2 collapse show" id="AccessB">
+
+                                
+                                
+                            <div class="col">
+                                <ul class="cards1">
+                                    <li>
+                                        <span class="fw-bold">Account No.:</span> <span>123344551499</span>
+                                    </li>
+                                    <li>
+                                        <span class="fw-bold">Account Name:</span> <span>John Thomas</span>
+                                    </li>
+                                </ul class="cards1">
+                            </div>
+                                
+                            <div class="col">
+                                <ul class="cards1">
+                                    <li>
+                                        <span class="fw-bold">Account No.:</span> <span>123344551499</span>
+                                    </li>
+                                    <li>
+                                        <span class="fw-bold">Account Name:</span> <span>John Thomas</span>
+                                    </li>
+                                </ul class="cards1">
+                            </div>
+
+                                
+                            <div class="col">
+                                <ul class="cards1">
+                                    <li>
+                                        <span class="fw-bold">Account No.:</span> <span>123344551499</span>
+                                    </li>
+                                    <li>
+                                        <span class="fw-bold">Account Name:</span> <span>John Thomas</span>
+                                    </li>
+                                </ul class="cards1">
+                            </div>
+
+                                
+                            <div class="col">
+                                <ul class="cards1">
+                                    <li>
+                                        <span class="fw-bold">Account No.:</span> <span>123344551499</span>
+                                    </li>
+                                    <li>
+                                        <span class="fw-bold">Account Name:</span> <span>John Thomas</span>
+                                    </li>
+                                </ul class="cards1">
+                            </div>
+
+                            </div>
+
+                       
+                    </div>
+
+
+                    <div class="specific_bank mb-4">
+
+                        <div class="bank_name col-12 col-md-12 col-lg-12 fw-bold py-1 " data-bs-target="#ubaB" data-bs-toggle="collapse">UBA Bank</div>
+
+                        <div class="bank_accounts row row-cols-xl-4 row-cols-lg-3 row-cols-sm-2 collapse" id="ubaB">
+                        
+                            <div class="col">
+                                <ul class="cards1">
+                                    <li>
+                                        <span class="fw-bold">Account No.:</span> <span>123344551499</span>
+                                    </li>
+                                    <li>
+                                        <span class="fw-bold">Account Name:</span> <span>John Thomas</span>
+                                    </li>
+                                </ul class="cards1">
+                            </div>
+                                
+                                
+                            <div class="col"> 
+                                <ul class="cards1">
+                                    <li>
+                                        <span class="fw-bold">Account No.:</span> <span>123344551499</span>
+                                    </li>
+                                    <li>
+                                        <span class="fw-bold">Account Name:</span> <span>John Thomas</span>
+                                    </li>
+                                </ul class="cards1">
+                            </div>
+                            
+                                
+                            <div class="col">
+                                <ul class="cards1">
+                                    <li>
+                                        <span class="fw-bold">Account No.:</span> <span>123344551499</span>
+                                    </li>
+                                    <li>
+                                        <span class="fw-bold">Account Name:</span> <span>John Thomas</span>
+                                    </li>
+                                </ul class="cards1">
+                            </div>
+                            
+                                
+                            <div class="col">
+                                <ul class="cards1">
+                                    <li>
+                                        <span class="fw-bold">Account No.:</span> <span>123344551499</span>
+                                    </li>
+                                    <li>
+                                        <span class="fw-bold">Account Name:</span> <span>John Thomas</span>
+                                    </li>
+                                </ul class="cards1">
+                            </div>
+                        
+                        </div>
+                       
+                    </div>
+                </div>
+
+
+                <div class="shadow rounded-1 p-4 deposit_form m-auto" style="max-width: 1000px;">
+
+                    <div class="title">Deposit</div>
+                    <form class="row mt-2 rows-cols-1 row-cols-md-2 align-items-center ">
+                        <label for="amount" class="col-md-1 fw-bold tibel">Amount</label>
+                        <div class="col-md-11"><input class="form-control" id="amount" type="text"></div>
+                        <label for="amount" class="col-md-1 fw-bold tibel">Account</label>
+                        <div class="col-md-11"><select id="amount" class="form-select mt-2">
+                            <option value="">Chisom Aka - first bank</option>
+                            <option value="">tochibo - access bank</option>
+                        </select></div>
+                        <div class="btn-row mt-2 text-center col-12 col-md-12"><input type="submit" class="btn btn-outline-primary depoBtn" value="Deposit"></div>
+                    </form>
+                    
+                </div>
+
+                <div style="max-width: 1000px;" class="m-auto">
+
+                    <div class="table-custom p-5 pt-4 mt-4  table-responsive ">
+                            <div class="title">Deposit History</div>
+
+                            <table class="table table-hover table-borderless mb-0 align-middle mt-3">
+                                    <thead>
+                                        <tr class="align-middle">
+                                            <th>S/N</th>
+                                            <th>Amount</th>
+                                            <th>Bank</th>
+                                            <th>A/Name</th>
+                                            <th>Status</th>
+                                            <th>Date</th>
+                                        </tr>
+                                    </thead>
+    
+                                    <tbody class="dHistoryT">
+                                        <tr>
+                                            <td>1</td>
+                                            <td>300</td>
+                                            <td>First Bank</td>
+                                            <td>Fred Wayne</td>
+                                            <td>Pending</td>
+                                            <td>5th of Jan, 2023</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>500</td>
+                                            <td>Access Bank</td>
+                                            <td>Fred Wayne</td>
+                                            <td>Successful</td>
+                                            <td>17th of Jul, 2021</td>
+                                        </tr>
+                                    </tbody>
+    
+    
+                            </table>
+                        </div>
+
+                    
+                </div>
+
+            </section>  
+
+
+ 
+    </div>
+
+</body>
+</html>

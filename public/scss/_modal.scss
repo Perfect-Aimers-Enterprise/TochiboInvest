@@ -1,0 +1,37 @@
+.cLogOutModalWarn {
+
+
+    .modal-heading{
+        color: $withdrawalFormBC;
+
+        span{
+            font-size: 1.3em;
+            border: $withdrawalFormBC solid 3px;
+            padding: 0px 19px;
+            font-family: "GT Walsheim Pro Regular";
+        }
+    }
+
+    .modal-content{
+        background-color: rgba(246, 235, 235, 0.955);
+        padding-top: 1rem;
+
+
+        .modal-body{
+
+            .cancel-btn {
+                background-color: $withdrawalFormBC;
+                color: white;
+                // font-weight: bold;
+
+                &:hover {
+                    background-color: shade-color($withdrawalFormBC, 20%);
+                }
+            }
+        }
+    }
+
+    .logoutTextHF{
+        color: $danger;
+    }
+}

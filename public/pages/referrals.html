@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" xintegrity="sha384-fz5P8oV2BHK78XHA9SYAAstYZuHPL7w9gC1rflUnHlyInVE4eZupz4eYV9R+5pnq" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/referrals.css">
+    <link rel="icon" href="assests/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="fontAwesome/css/all.min.css">
+    <script  src="./js/bootstrap.js" defer></script>
+    <script defer  src="./js/general.js"></script>
+    <script defer  src="./js/referrals.js"></script>
+
+    <title>Referrals</title>
+</head>
+<body>
+    
+    
+        <div class="bodyOverlay d-none"></div>
+
+
+               <!--The Fix Positioned Sidebar -->
+
+
+    <!-- For phone Size -->
+    <nav class="forPhones d-md-none">
+        <div>
+            <button class="showMenu text-white"><span class="fas fa-bars"></span></button>
+            <a href="">Referrals<span></span></a>
+            <a class="nLetters" href="">MO</a>
+        </div>
+    </nav>
+
+    <!-- Normal View -->
+    <div class="navContainer d-flex position-fixed z-2 align-items-start">
+            <div class=" vh-100 sideBar overflow-hidden  start-0 top-0 z-2" id="navbarCus1">
+
+            <div class="row row-cols-1">
+                    <div class="col">
+                            <div class="logo"><img src="./assests/img/logo.png" alt="" class="w-100"></div>
+                        </div>
+                    </div>
+
+                        <div class="sideBarLinks overflow-hidden py-4 row col row-cols-1 h-50 align-content-around text-muted ps-0">
+                            <div class="col"><a href="index.html" class="sideBarText"><span><i class="fas fa-house-user"></i></span>Dashboard</a></div>
+                            <div class="col "><a class="sideBarText" href="products.html"><span><i class="fa-solid fa-bicycle"></i></span>Products</a></div>
+                            <div class="col"><a class="sideBarText" href="deposit.html"><span><i class="fas fas fa-sign-in-alt"></i></span>Deposit</a></div>
+                            <div class="col"><a class="sideBarText" href="withdrawal.html"><span><i class="fas fas fa-sign-out-alt active"></i></span>Withdrawal</a></div>
+                            <div class="col active"><a class="sideBarText"><span><i class="fa-solid fa-users"></i></span>Referrals</a></div>
+                            <div class="col"><a class="sideBarText" href="faqs.html"><span><i class="fas fa-question active"></i></span>FAQS</a></div>
+                            <div class="col " ><a class="sideBarText text-danger text-decoration-none" data-bs-toggle="modal" data-bs-target="#logoutModal"><span><i class="fas fa-power-off"></i></span>Logout</a></div>
+                        </div>
+            </div>
+
+            <button class="d-md-none btn-close btn-close-white mx-3 mt-3 fs-4 border hideNavbar"></button>
+    </div>
+
+            
+
+            <section class="modal cLogOutModalWarn " id="logoutModal">
+                <div class="modal-dialog">
+
+                    <div class="modal-content" >
+                        <div class="modal-heading">
+                            
+                            <h1 class="text-center"><span class="rounded-circle">?</span></h1>
+                        </div>
+
+                        <div class="modal-body text-center">
+                            <span class="fs-5 fw-bold logoutTextHF">Tochibo Portal</span> <br>
+                            Are you sure you want to signout? <br> <br>
+                            <a class="btn btn-danger" href="./login.html">Yes!</a> <a class="btn cancel-btn" data-om-dismiss="modal" type="button">Cancel</a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+
+
+
+                    <section class="referral-body pt-5">
+
+
+                        <!-- Referral Details section -->
+                        <section class="referral_details p-3">
+
+                            <div class="referral_details_holder rows-cols-lg-2 p-4 maxCustom1 m-auto rounded-1">
+                                <div class="title">Referral Link</div>
+                                <div class="code mt-1"><input class="form-control ref-link" readonly value="tochibo/dhdakkja" type="text"></div>
+                                <div class="btn-row mt-2"><button class="btn btn-logoBlue">Copy</button></div>
+                            </div>
+
+                        </section>
+
+                        <section class="referral_count_section p-3">
+                            <div class="referral_count_holder text-center p-3 maxCustom1 m-auto rounded-1">
+                                <span class="icon rounded-circle"><i class="fa-solid fa-users "></i></span><br>
+                                <span class="referral_count">3</span><br>
+                                <span class="referral_info_title_number">Total  Referrals</span>
+                            </div>
+                        </section>
+
+                        <section class="team tA px-3 pt-3">
+                        <div class=" col border border-2 rounded-2 border-logoBlue maxCustom1 m-auto">
+                                 <div class="title col-12 px-2 d-flex justify-content-between align-content-center" data-bs-target="#tA" data-bs-toggle="collapse"><span class="fw-bold">Team A</span></div>  
+                        <div class="col-12 mb-4 collapse show infoDiv" id="tA" style="padding-inline:24px;">
+                        <div class="table-custom p-5 mt-4  table-responsive ">
+                        <table class="table table-hover table-borderless mb-0 align-middle">
+                                <thead>
+                                    <tr class="align-middle">
+                                        <th>Email</th>
+                                        <th>Date</th>
+                                        <th>Total Invested</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody class="tAt">
+                                    <!-- <tr>
+                                        <td>Micheal</td>
+                                        <td>5th of Jan, 2023</td>
+                                        <td>$200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Miracle</td>
+                                        <td>17th of Jul, 2021</td>
+                                        <td>$100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Miracle</td>
+                                        <td>17th of Jul, 2021</td>
+                                        <td>$100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Miracle</td>
+                                        <td>17th of Jul, 2021</td>
+                                        <td>$100</td>
+                                    </tr> -->
+                                </tbody>
+
+
+                            </table>
+                            <div class="noRef noRefA d-none" style="min-width:400px">
+                                    <div class="child">
+                                        You Have no team A referrals
+                                    </div>
+                            </div>
+                        </div>
+
+
+                        </div>
+
+                        </div>
+                    </section>
+
+                        <section class="team tB px-3 pt-3">
+                        <div class=" col border border-2 rounded-2 border-logoBlue maxCustom1 m-auto">
+                                 <div class="title col-12 px-2 d-flex justify-content-between align-content-center" data-bs-target="#tB" data-bs-toggle="collapse"><span class="fw-bold">Team B</span></div>  
+                        <div class="col-12 mb-4 collapse show infoDiv" id="tB" style="padding-inline:24px;">
+                        <div class="table-custom p-5 mt-4  table-responsive ">
+                        <table class="table table-hover table-borderless mb-0 align-middle">
+                                <thead>
+                                    <tr class="align-middle">
+                                        <th>Email</th>
+                                        <th>Date</th>
+                                        <th>Total Invested</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody class="tBt">
+                                    <!-- <tr>
+                                        <td>Micheal</td>
+                                        <td>5th of Jan, 2023</td>
+                                        <td>$200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Miracle</td>
+                                        <td>17th of Jul, 2021</td>
+                                        <td>$100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Miracle</td>
+                                        <td>17th of Jul, 2021</td>
+                                        <td>$100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Miracle</td>
+                                        <td>17th of Jul, 2021</td>
+                                        <td>$100</td>
+                                    </tr> -->
+                                </tbody>
+
+
+                            </table>
+                            <div class="noRef noRefB d-none" style="min-width:400px">
+                                    <div class="child">
+                                        You Have no team B referrals
+                                    </div>
+                            </div>
+                        </div>
+
+
+                        </div>
+
+                        </div>
+                    </section>
+                        <section class="team tC px-3 pt-3">
+                        <div class=" col border border-2 rounded-2 border-logoBlue maxCustom1 m-auto">
+                                 <div class="title col-12 px-2 d-flex justify-content-between align-content-center" data-bs-target="#tC" data-bs-toggle="collapse"><span class="fw-bold">Team C</span></div>  
+                        <div class="col-12 mb-4 collapse show infoDiv" id="tC" style="padding-inline:24px;">
+                        <div class="table-custom p-5 mt-4  table-responsive ">
+                        <table class="table table-hover table-borderless mb-0 align-middle">
+                                <thead>
+                                    <tr class="align-middle">
+                                        <th>Email</th>
+                                        <th>Date</th>
+                                        <th>Total Invested</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody class="tCt">
+                                    <!-- <tr>
+                                        <td>Micheal</td>
+                                        <td>5th of Jan, 2023</td>
+                                        <td>$200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Miracle</td>
+                                        <td>17th of Jul, 2021</td>
+                                        <td>$100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Miracle</td>
+                                        <td>17th of Jul, 2021</td>
+                                        <td>$100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Miracle</td>
+                                        <td>17th of Jul, 2021</td>
+                                        <td>$100</td>
+                                    </tr> -->
+                                </tbody>
+
+
+                            </table>
+                            <div class="noRef noRefC d-none" style="min-width:400px">
+                                    <div class="child">
+                                        You Have no team C referrals
+                                    </div>
+                            </div>
+                        </div>
+
+
+                        </div>
+
+                        </div>
+                    </section>
+
+
+                    </section>
+
+         
+            
+        </div>
+
+
+</body>
+</html>

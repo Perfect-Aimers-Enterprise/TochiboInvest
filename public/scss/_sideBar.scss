@@ -1,0 +1,108 @@
+
+@include moveLeft();
+
+.navContainer{
+
+    @include media-breakpoint-down(md) {
+    // width: 0;
+    transform: translateX(-100%);
+    overflow: hidden;
+    // padding: 0;
+    box-sizing: border-box;
+    transition: all 0.7s ease;
+  }
+
+
+  .sideBarText {
+  font-weight: bold;
+  padding-block: 0.5rem 0.8rem;
+  @include transitionGen($dur: 0.3s);
+  // line-height: .5rem;
+
+  &:hover:not(.active) {
+    transform: translateX(12px);
+  }
+
+  span {
+    padding-right: 0.6rem;
+    font-size: 1.5rem;
+  }
+}
+
+.sideBarLinks {
+  & > .col {
+    padding-left: 1.5rem;
+    &>a, &>button{
+      color: $generalFontColor;
+      text-decoration: none;
+      display: block;
+      background-color: transparent;
+      border: none;
+      padding-inline: 0;
+    }
+
+    &.active {
+      color: white;
+      background-color: $logoYellow;
+      box-shadow: 2px 4px 6px rgb(73, 162, 235);
+      border-radius: 5px;
+    }
+  }
+  margin-right: -2rem;
+}
+
+.sideBar {
+  // padding: ;
+  box-shadow: 1px 0 8px 0 rgba(14, 14, 91, 0.341);
+  width: 213px;
+  background-color: $backForeColor;
+  // background-color: tint-color($cardsColor, 70%);
+  // padding-left: 2rem;
+
+}
+
+
+}
+
+
+nav.forPhones{
+  &>div{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    background-color: rgb(70, 70, 70);
+    justify-content: space-between;
+    z-index: 2;
+    align-items: center;
+    padding-inline: 15px;
+    &>a, &>button{
+      font-size: 20px;
+      color: white;
+      padding-block: 4px;
+      text-decoration: none;
+      background-color: transparent;
+      border: none;
+      &:focus{
+        color: $backForeColor !important;
+      }
+
+      &.nLetters{
+        border-radius: 10px;
+        background-color: $withdrawalFormBC;
+        padding: 3px 2px;
+        font-size: 1.3em;
+      }
+    }
+  }
+
+
+}
+
+  .bodyOverlayAction{
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.336);
+    z-index: 1;
+  }

@@ -1,0 +1,95 @@
+.OTPinputDiv input{
+    width: 20px;
+    height: 20px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    font: bold;
+    text-align: center;
+}
+.miniOTP{
+    justify-content: center;
+    align-items: center;
+    /* background: red; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    line-height: 1px;
+    background-color: rgb(163, 192, 235);
+    border-radius:5px;
+
+}
+.resendDiv{
+    margin-top: 15px;
+    align-items: center;
+    text-align: center;
+    /* background: green; */
+}
+
+.resendDiv .submitbtn{
+    border-radius: 5px;
+    background-color: rgb(104, 104, 236);
+    border: none;
+    padding: 6px 15px;
+    color: white;
+}
+
+.resendDiv .submitbtn:focus{
+    background-color: rgb(63, 63, 146);
+}
+
+.resendDiv h3{
+    color: blue;
+}
+.resendDiv2{
+    color: green;
+    display: none;
+}
+.OTPinputDiv{
+    /* background: blue; */
+    border: 2px solid rgb(194, 209, 231);
+    padding: 5px;
+    border-radius: 5px;
+}
+.otpPage{
+    width: 250px;
+    height: 200px;
+    border-radius: 20px;
+    margin-inline: auto;
+    margin-top: 50px;
+    /* position: absolute;
+    top: 40%;
+    left: 30%; */
+}
+
+.mailText{
+    text-align: center;
+    font-size: 1.2em;
+}
+.OTPspan{
+    font-weight: 700;
+}
+
+body{
+    background-color: rgb(194, 209, 231);
+
+}
+
+.resendbtn {
+    color: blue;
+    border: none;
+    background-color: transparent;
+    font-size: 1.1em;
+}
+
+.resendbtn:focus{
+    color: rgb(13, 13, 219);
+}
+
+.wrongOTP{
+    color: red;
+    text-align: center;
+    margin-bottom: 5px;
+    display: none;
+}

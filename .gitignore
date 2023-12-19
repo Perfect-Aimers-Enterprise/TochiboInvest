@@ -1,0 +1,4 @@
+fontawesome/
+node_modules/
+.env
+.vercel

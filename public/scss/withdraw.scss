@@ -1,0 +1,195 @@
+// Custom.scss
+
+// scss-docs-start import-stack
+// Configuration
+@import "../../node_modules/bootstrap/scss/functions";
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 670px,
+  md: 850px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+// Import Variables
+@import "variables";
+
+
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/variables-dark";
+
+//Custom Map Merges
+
+@import "./map-merges";
+
+
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/utilities";
+
+// Layout & components
+@import "../../node_modules/bootstrap/scss/root";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/images";
+@import "../../node_modules/bootstrap/scss/containers";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/tables";
+@import "../../node_modules/bootstrap/scss/forms";
+@import "../../node_modules/bootstrap/scss/buttons";
+@import "../../node_modules/bootstrap/scss/transitions";
+@import "../../node_modules/bootstrap/scss/dropdown";
+@import "../../node_modules/bootstrap/scss/button-group";
+@import "../../node_modules/bootstrap/scss/nav";
+@import "../../node_modules/bootstrap/scss/navbar";
+@import "../../node_modules/bootstrap/scss/card";
+@import "../../node_modules/bootstrap/scss/accordion";
+@import "../../node_modules/bootstrap/scss/breadcrumb";
+@import "../../node_modules/bootstrap/scss/pagination";
+@import "../../node_modules/bootstrap/scss/badge";
+@import "../../node_modules/bootstrap/scss/alert";
+@import "../../node_modules/bootstrap/scss/progress";
+@import "../../node_modules/bootstrap/scss/list-group";
+@import "../../node_modules/bootstrap/scss/close";
+@import "../../node_modules/bootstrap/scss/toasts";
+@import "../../node_modules/bootstrap/scss/modal";
+@import "../../node_modules/bootstrap/scss/tooltip";
+@import "../../node_modules/bootstrap/scss/popover";
+@import "../../node_modules/bootstrap/scss/carousel";
+@import "../../node_modules/bootstrap/scss/spinners";
+@import "../../node_modules/bootstrap/scss/offcanvas";
+@import "../../node_modules/bootstrap/scss/placeholders";
+
+// Helpers
+@import "../../node_modules/bootstrap/scss/helpers";
+
+// Utilities
+@import "../../node_modules/bootstrap/scss/utilities/api";
+// scss-docs-end import-stack
+
+
+
+// Import Mixins
+@import "mixins";
+
+// Import Side Bar
+@import "sideBar";
+
+
+// Import Modal
+@import "modal";
+
+@import "custom-table";
+
+
+
+
+body {
+  margin: 0;
+  //   width: 100vw;
+  // @include media-breakpoint-down(sm){
+  //   font-size: 12px;
+  // }
+    @include media-breakpoint-down(sm){
+    font-size: 14px;
+  }
+}
+
+.row {
+  margin-inline: 0;
+}
+
+.platform {
+  background-color: $bodyBackgroundColor;
+  min-height: 100vh;
+}
+
+
+
+.body-dom {
+  margin-left: 213px;
+  margin: auto;
+  //   padding-right: 2.3rem;
+  //   padding-left: 0.6rem;
+  @include transitionGen();
+  @include media-breakpoint-down(md) {
+    // margin-left: 0px;
+    // padding-inline-end: 3rem;
+  }
+}
+
+
+@mixin cards() {
+  background-color: $backForeColor;
+  @include shadowTransition();
+
+}
+
+  .withdrawal-form-section{
+    margin-left:0;
+    transition: all 1.5s ease;
+    border-radius: 5px;
+
+
+    .withdrawalAlert{
+      background-color: tint-color($logoYellow, 10%);
+    }
+
+    @include media-breakpoint-up(md){
+      margin-left: 213px;
+    }
+  }
+
+.withdrawal-form {
+  border: 2px $logoBlue solid;
+  padding: 1em 1.2em;
+  border-radius: 5px;
+
+  & > :not(.purpose) {
+    text-align: center;
+  }
+
+  div{
+
+      &.btn-row{
+        &>button{
+          font-weight: bold;
+          border-width: 2px;
+          color: $logoBlue;
+          border: 2px $logoBlue solid;
+
+          &:hover{
+            background-color: $logoBlue;
+            color: white;
+          }
+
+        }
+      }
+
+  }
+
+
+  label {
+    font-weight: bold;
+    color: shade-color($secondary, 30%);
+  }
+  & * {
+    font-size: 1em;
+  }
+
+
+}
+
+.title{
+  font-size: 1.1em;
+  font-weight: bold;
+  color: $withdrawalFormBC;
+}
+
+.table-custom{
+  .title{
+    margin-left: -1.5rem;
+  }
+}

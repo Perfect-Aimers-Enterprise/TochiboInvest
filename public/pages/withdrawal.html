@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="./css/withdraw.css" />
+    <link rel="stylesheet" href="fontAwesome/css/all.min.css" />
+    <link rel="icon" href="assests/img/logo.png" type="image/x-icon">
+    <script defer  src="./js/bootstrap.js"></script>
+    <script defer  src="./js/general.js"></script>
+    <script defer  src="./js/withdrawal.js"></script>
+
+
+    <title>Withdrawal</title>
+  </head>
+  <body>
+
+
+    <div class="bodyOverlay d-none"></div>
+
+   <div class="platform">
+
+                <!--The Fix Positioned Sidebar -->
+
+
+    <!-- For phone Size -->
+    <nav class="forPhones d-md-none">
+        <div>
+            <button class="showMenu text-white"><span class="fas fa-bars"></span></button>
+            <a href="">Deposit<span></span></a>
+            <a class="nLetters" href="">MO</a>
+        </div>
+    </nav>
+
+    <!-- Normal View -->
+    <div class="navContainer d-flex position-fixed z-2 align-items-start">
+            <div class=" vh-100 sideBar overflow-hidden  start-0 top-0 z-2" id="navbarCus1">
+
+            <div class="row row-cols-1">
+                    <div class="col">
+                            <div class="logo"><img src="./assests/img/logo.png" alt="" class="w-100"></div>
+                        </div>
+                    </div>
+
+                        <div class="sideBarLinks overflow-hidden py-4 row col row-cols-1 h-50 align-content-around text-muted ps-0">
+                            <div class="col"><a href="index.html" class="sideBarText"><span><i class="fas fa-house-user"></i></span>Dashboard</a></div>
+                            <div class="col "><a class="sideBarText" href="products.html"><span><i class="fa-solid fa-bicycle"></i></span>Products</a></div>
+                            <div class="col"><a class="sideBarText" href="deposit.html"><span><i class="fas fas fa-sign-in-alt"></i></span>Deposit</a></div>
+                            <div class="col active"><a class="sideBarText"><span><i class="fas fas fa-sign-out-alt active"></i></span>Withdrawal</a></div>
+                            <div class="col"><a href="referrals.html" class="sideBarText"><span><i class="fa-solid fa-users"></i></span>Referrals</a></div>
+                            <div class="col"><a class="sideBarText" href="faqs.html"><span><i class="fas fa-question active"></i></span>FAQS</a></div>
+                            <div class="col " ><button class="sideBarText text-danger text-decoration-none" data-bs-toggle="modal" data-bs-target="#logoutModal"><span><i class="fas fa-power-off"></i></span>Logout</button></div>
+                        </div>
+            </div>
+
+            <button class="d-md-none btn-close btn-close-white mx-3 mt-3 fs-4 border hideNavbar"></button>
+    </div>            
+
+            <section class="modal cLogOutModalWarn " id="logoutModal">
+                <div class="modal-dialog">
+
+                    <div class="modal-content" >
+                        <div class="modal-heading">
+                            
+                            <h1 class="text-center"><span class="rounded-circle">?</span></h1>
+                        </div>
+
+                        <div class="modal-body text-center">
+                            <span class="fs-5 fw-bold logoutTextHF">Tochibo Portal</span> <br>
+                            Are you sure you want to signout? <br> <br>
+                            <a class="btn btn-danger" href="./authenticate-signIn.html">Yes!</a> <a class="btn cancel-btn" data-om-dismiss="modal" type="button">Cancel</a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+
+
+                <section class=" pt-2 px-4 pb-3 withdrawal-form-section">
+
+                    <div class="mx-auto alert alert-dismissible withdrawalAlert fade show mt-5" style="max-width:1000px; font-size: 1.1em;">
+                        <button class="btn-close" data-bs-dismiss="alert"></button>
+                        <strong>Notice!</strong>
+                        Please note that withdrawal requests may take up to a maximum of three days to be proceesed.
+                    </div>
+                    
+                    <div class="cards shadow p-4 px=0 mt-5 mx-auto" style="max-width: 1000px;">
+
+                        <form action="" class=" withdrawal-form m-auto row row-cols-1 gy-2">
+                            
+                            <div class="purpose col-md-2">
+                                <label for="amount">Amount</label>
+                            </div> 
+                            <div class=" col-md-10">
+                                <input id="amount" type="number" class="form-control" placeholder="Minimum of 5$" required>
+                            </div>
+                            <div class="purpose col-md-2">
+                                <label for="ANam">Account  Name</label>
+                            </div>
+                            <div class=" col col-md-10">
+                                <input id="ANam" type="text" class="form-control " required>
+        
+                            </div>
+                            <div class="purpose col-md-2">
+                                <label for="ANum">Account Number</label>
+                            </div>
+                            <div class=" col-md-10" >
+                                <input id="ANum" type="text" class="form-control " required>
+        
+                            </div>
+
+                            <div class="purpose col-md-2">
+                                <label for="BNam">Bank Name</label>
+                            </div>
+                            <div class=" col-md-10" >
+                                <input id="BNam" type="text" class="form-control " required>
+        
+                            </div>
+                            <div class="btn-row">
+                                <button type="button" class="btn withdBtn">Withdraw</button>
+                            </div>
+                        </form>
+
+
+                            
+
+
+                    </div>
+
+
+                    <div class="mx-auto" style="max-width: 1000px;" class="pb-3">
+
+                    <div class="table-custom p-5 pt-4 mt-4  table-responsive ">
+                            <div class="title">Withdrawal History</div>
+
+                            <table class="table table-hover table-borderless mb-0 align-middle mt-3">
+                                    <thead>
+                                        <tr class="align-middle">
+                                            <th>S/N</th>
+                                            <th>Amount</th>
+                                            <th>Bank</th>
+                                            <th>A/Name</th>
+                                            <th>A/Number</th>
+                                            <th>Status</th>
+                                            <th>Date</th>
+                                        </tr>
+                                    </thead>
+    
+                                    <tbody class="wHistoryT">
+                                        <tr>
+                                            <td>1</td>
+                                            <td>300</td>
+                                            <td>First Bank</td>
+                                            <td>Fred Wayne</td>
+                                            <td>Pending</td>
+                                            <td>5th of Jan, 2023</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>500</td>
+                                            <td>Access Bank</td>
+                                            <td>Fred Wayne</td>
+                                            <td>Successful</td>
+                                            <td>17th of Jul, 2021</td>
+                                        </tr>
+                                    </tbody>
+    
+    
+                            </table>
+                        </div>
+
+                    
+                </div>
+                        
+                </section>
+
+    </div>
+
+
+            </div>
+            
+
+
+        </div>
+    </div>
+</body>
+</html>

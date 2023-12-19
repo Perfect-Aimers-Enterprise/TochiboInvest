@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+}
+
+.platform {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: yellow;
+  overflow-x: hidden;
+}

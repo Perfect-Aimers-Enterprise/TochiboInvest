@@ -1,0 +1,172 @@
+// Custom.scss
+
+// scss-docs-start import-stack
+// Configuration
+@import "../../node_modules/bootstrap/scss/functions";
+
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 670px,
+  md: 768px,
+  cmd: 850px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+// Import Custom Variables
+@import "variables";
+
+
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/variables-dark";
+
+//Custom Map Merges
+@import "map-merges";
+
+
+$utilities: ();
+
+
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/utilities";
+
+// Layout & components
+@import "../../node_modules/bootstrap/scss/root";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/images";
+@import "../../node_modules/bootstrap/scss/containers";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/tables";
+@import "../../node_modules/bootstrap/scss/forms";
+@import "../../node_modules/bootstrap/scss/buttons";
+@import "../../node_modules/bootstrap/scss/transitions";
+@import "../../node_modules/bootstrap/scss/dropdown";
+@import "../../node_modules/bootstrap/scss/button-group";
+@import "../../node_modules/bootstrap/scss/nav";
+@import "../../node_modules/bootstrap/scss/navbar";
+@import "../../node_modules/bootstrap/scss/alert";
+@import "../../node_modules/bootstrap/scss/list-group";
+@import "../../node_modules/bootstrap/scss/close";
+@import "../../node_modules/bootstrap/scss/toasts";
+@import "../../node_modules/bootstrap/scss/modal";
+@import "../../node_modules/bootstrap/scss/tooltip";
+@import "../../node_modules/bootstrap/scss/popover";
+@import "../../node_modules/bootstrap/scss/carousel";
+@import "../../node_modules/bootstrap/scss/spinners";
+@import "../../node_modules/bootstrap/scss/offcanvas";
+@import "../../node_modules/bootstrap/scss/placeholders";
+
+// Helpers
+@import "../../node_modules/bootstrap/scss/helpers";
+
+// Utilities
+@import "../../node_modules/bootstrap/scss/utilities/api";
+// scss-docs-end import-stack
+
+
+// Import Mixins
+@import "mixins";
+
+// Import Side Bar
+@import "sideBar";
+
+// Import Modal
+@import "modal";
+
+
+// Import Custom Table
+@import "custom-table";
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  //   width: 100vw;
+  overflow-x: hidden !important;
+  background-color: $bodyBackgroundColor;
+    @include media-breakpoint-down(sm){
+    font-size: 14px;
+  }
+
+}
+.row {
+  margin-inline: 0;
+}
+.referral-body{
+  @include media-breakpoint-up(md){
+    margin-left: 213px;
+  }
+
+
+  .referral_details_holder{
+    @include shadowTransition();
+  
+    .title{
+      color: $logoBlue;
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+  
+    .code, .btn-row{
+      padding-left: 2rem;
+    }
+  }
+
+  .referral_count_section{
+      color: shade-color($logoBlueSubtle, 40%);
+    .referral_count_holder{
+      @include shadowTransition();
+
+      span.icon{
+      font-size: 2.1em;
+      
+    }
+    span.referral_count{
+        font-weight: bold;
+        font-size: 1.5em;
+      }
+    }
+  }
+
+}
+
+section.team{
+  .title{
+    background-color: $logoBlue;
+    color: white;
+    font-size: 1.2em;
+    padding-inline: .6rem;
+
+    
+    &:after{
+        padding-top: 3px;
+        // display: block;
+        float: right;
+        content: "\25BC";
+        font-size: .7em;
+        vertical-align: middle;
+            }
+  }
+
+}
+
+.maxCustom1{
+  max-width: 1000px;
+}
+
+.noRef{
+  font-style: italic;
+  background-color: rgb(136 131 131);
+  color: white;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  height: 90px;
+  font-size: 1.2em;
+}
