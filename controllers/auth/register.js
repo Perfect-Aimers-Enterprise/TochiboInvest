@@ -41,6 +41,7 @@ const sendOtp = async(req, res, user)=>{
     const otp = otpGenerator.generate(5, { lowerCaseAlphabets:false, upperCaseAlphabets:false, specialChars: false });
     console.log(otp);
     const otpDoc = await otpModel.create({ otp, _id: user._id, expiresAt: Date.now() + 5 * 60 *1000 });
+
     const mailOptions = {
         from: "Tochibo '<melodyozuru087@gmail.com>'",
         to: `${user.email}`,
@@ -57,7 +58,6 @@ const sendOtp = async(req, res, user)=>{
 
 const resendOTP = async(req, res)=>{
     const { id  } = req.params;
-    console.log(req.params);
     await otpModel.deleteMany({_id:id });
     const user = await userModel.findById({_id:id });
     await sendOtp(req, res, user);
@@ -70,18 +70,13 @@ const register = async(req, res)=>{
     
     const otp = await otpModel.findOne({ _id:id });
     // console.log(Date.now(), otp.expiresAt);
-    console.log(Date.now());
     console.log(otp.expiresAt);
     const isExpired = Date.now() > otp.expiresAt;
-    console.log(isExpired);
-    console.log(enteredOTP);
-    console.log(otp.otp);
 
     if(isExpired) throw new BadRequest("The OTP has expired");
     const isCorrect = await bcrypt.compare(enteredOTP, otp.otp);
     
     if(!isCorrect) throw new authenticationError("Wrong OTP");
-    console.log("Here");
     await assignReferralInfo(user);
     await financialSummary.create({ _id: user._id, availableFunds: 400});
     await withdrawalModel.create({ _id: user._id});
