@@ -40,18 +40,17 @@ async function sendOTP(e){
     body = JSON.stringify(body);
 
     try{
-        const response = await fetch(url)
-        // const response = await fetch(url, {
-        //     method: "POST",
-        //     headers:{
-        //         "Content-Type":"application/json"
-        //     },
-        //     body
-        // })
+        const response = await fetch(url, {
+            method: "POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body
+        })
         if (!response.ok) throw new Error("An error occured");
         const data = await response.json();
         const { id } = data;
-        // window.location.href = `/OTP.html?id=${id}`;
+        window.location.href = `/OTP.html?id=${id}`;
     }
     catch(err){
         console.log(err);
