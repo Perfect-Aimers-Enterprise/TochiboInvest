@@ -7,6 +7,8 @@ const registerForm = document.querySelector(".formCus1");
 const url = "/Tchibo/v1/auth/register/sendOTP";
 const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
+const loader = document.querySelector(".loader.full");
+const alreadyTaken = document.querySelector(".alreadyTaken");
 
 
 referralCodeField.value = params.get("refCode");
@@ -16,6 +18,8 @@ registerForm.addEventListener("submit", sendOTP);
 
 
 async function sendOTP(e){
+    loader.classList.toggle("d-none");
+
     e.preventDefault();
     const name = namesField.value;
     const email = emailField.value;
@@ -47,15 +51,50 @@ async function sendOTP(e){
             },
             body
         })
-        if (!response.ok) throw new Error("An error occured");
+
         const data = await response.json();
+
+        if(response.status===409) {
+            alreadyTaken.classList.remove("d-none"); 
+            setTimeout(() => {
+                alreadyTaken.classList.add("d-none");
+            }, 3000);
+        }
+
+        else if((response.ok) || (response.ok && data.msg==="An email of a pending user")){
         const { id } = data;
+        const response = await resendOTP(id);
+        if(!response.ok) throw new Error("An error occured");
         window.location.href = `/OTP.html?id=${id}`;
+        }
+
+        else{
+            throw new Error("An error occured");
+        }
+        loader.classList.toggle("d-none");
     }
     catch(err){
-        console.log(err);
+        loader.classList.toggle("d-none");
+        alert("Internal Server Error");
     }
 
 
 
+}
+
+
+const resendOTP = async (id)=>{
+
+    try{
+        
+        const response = await fetch(`/Tchibo/v1/auth/register/resendOTP/${id}`, {
+            headers:{
+                "Content-Type":"application/json"
+            }
+    });
+    return response;
+    }
+    catch(err){
+        console.log(err)
+    }
 }

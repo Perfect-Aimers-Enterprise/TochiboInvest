@@ -5527,6 +5527,14 @@ form {
   border: none;
   display: block;
 }
+
+.signIn .submit button, .signUpSec .submit button:hover{
+  background-color: rgba(50, 50, 207, 0.703);
+}
+.signIn .submit button, .signUpSec .submit button:focus{
+  background-color: rgba(25, 25, 102, 0.703);
+}
+
 .signUpSec a {
   width: 90%;
   margin: auto;
@@ -5637,5 +5645,30 @@ form {
   input::value{
     font-weight: bold;
   }
+
+
+/** Loader Image Overlay*/
+.loader {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.521);
+}
+.loader-img {
+  position: absolute;
+  width: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.loader-img > .img-fluidCus {
+  width: 100%;
+  display: block;
+  margin-inline: auto;
+  max-width: 340px;
+}
+
+
 
 /*# sourceMappingURL=styles.css.map */

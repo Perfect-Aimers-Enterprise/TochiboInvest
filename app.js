@@ -67,17 +67,17 @@ app.post('/upload', upload.single('image'), (req, res) => {
 });
 
 
-app.get('/admin', (req, res) => {
-    const adminFilePath = path.join(publicPath, 'admin2.html')
+// app.get('/admin', (req, res) => {
+//     const adminFilePath = path.join(publicPath, 'admin2.html')
     
-    res.sendFile(adminFilePath)
-})
+//     res.sendFile(adminFilePath)
+// })
 
 app.use(notFound);
 app.use(errorHandler);
 const PORT = process.env.PORT || 5000;
 const start = async () => {
-    await connectDB(process.env.MONGO_URI2);
+    await connectDB(process.env.MONGO_URI);
     app.listen(PORT, () => console.log("Server listening at port " + PORT));
 };
 

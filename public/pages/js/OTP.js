@@ -20,7 +20,6 @@ const intervalId =setInterval(()=>{
 const resendOTP = async ()=>{
 
     try{
-        console.log(params.get("id"));
         
         const response = await fetch(`/Tchibo/v1/auth/register/resendOTP/${params.get("id")}`, {
             headers:{
@@ -29,7 +28,7 @@ const resendOTP = async ()=>{
     });
     }
     catch(err){
-        console.log(err)
+        alert("An error occured");
     }
 }
 
@@ -64,14 +63,23 @@ const submitOTP = async()=>{
 
         if(response.ok){
         const { token } = await response.json();
-        console.log(token);
         localStorage.setItem("token", token);
         window.location.href = "/";
+        }
+        else if(response.status===400){
+            wrongOTP.classList.remove("d-none");
+            setTimeout(()=>{
+                wrongOTP.classList.add("d-none");
+
+            }, 3000);
+        }
+        else{
+            throw new Error("An Error Occured");
         }
     }
    
     catch(err){
-        console.log(err);
+        alert(err);
     }
 }
 

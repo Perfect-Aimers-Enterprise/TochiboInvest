@@ -77,6 +77,8 @@ $utilities: ();
 // Import Modal
 @import "modal";
 
+// Import LoaderOverlay
+@import "loaderOverlay";
 
 :root {
   font-size: 16px;
@@ -262,28 +264,6 @@ i.conceptIcons {
 //   padding: 3rem 1.5rem;
 // }
 
-  .loader{
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    background-color: #00000046;
-
-  &-img{
-    position: absolute;
-    width: 40%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    &>.img-fluidCus{
-      width: 100%;
-      display: block;
-      margin-inline: auto;
-      max-width: 340px;
-    }
-
-  }
-}
 
 .noRef{
   font-style: italic;

@@ -12585,7 +12585,7 @@ nav.forPhones > div > a:focus, nav.forPhones > div > button:focus {
   color: rgb(208, 229, 250) !important;
 }
 nav.forPhones > div > a.nLetters, nav.forPhones > div > button.nLetters {
-  border-radius: 50%;
+  border-radius: 10px;
   background-color: #163d8a;
   padding: 3px 2px;
   font-size: 1.3em;
@@ -12622,6 +12622,27 @@ nav.forPhones > div > a.nLetters, nav.forPhones > div > button.nLetters {
 }
 .cLogOutModalWarn .logoutTextHF {
   color: #dc3545;
+}
+
+.loader {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.2745098039);
+}
+.loader-img {
+  position: absolute;
+  width: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.loader-img > .img-fluidCus {
+  width: 100%;
+  display: block;
+  margin-inline: auto;
+  max-width: 340px;
 }
 
 :root {
@@ -12814,27 +12835,6 @@ i.conceptIcons {
 
 .infoDiv {
   padding-bottom: 1rem;
-}
-
-.loader {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.2745098039);
-}
-.loader-img {
-  position: absolute;
-  width: 40%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.loader-img > .img-fluidCus {
-  width: 100%;
-  display: block;
-  margin-inline: auto;
-  max-width: 340px;
 }
 
 .noRef {
