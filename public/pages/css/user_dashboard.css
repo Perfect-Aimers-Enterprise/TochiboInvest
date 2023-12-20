@@ -12629,7 +12629,7 @@ nav.forPhones > div > a.nLetters, nav.forPhones > div > button.nLetters {
   height: 100vh;
   position: fixed;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.2745098039);
+  background-color: rgba(0, 0, 0, 0.521);
 }
 .loader-img {
   position: absolute;

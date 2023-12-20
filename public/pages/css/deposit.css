@@ -12001,9 +12001,6 @@ nav.forPhones > div > a.nLetters, nav.forPhones > div > button.nLetters {
 .table-custom table {
   border-radius: 10px;
 }
-.table-custom table tr > :nth-child(3) {
-  min-width: 142px;
-}
 .table-custom td,
 .table-custom th {
   width: -moz-fit-content;
