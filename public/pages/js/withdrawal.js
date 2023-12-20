@@ -2,14 +2,25 @@ const amountField = document.querySelector("#amount");
 const ANumField = document.querySelector("#ANum");
 const ANameField = document.querySelector("#ANam");
 const BNameField = document.querySelector("#BNam");
-const withdrawBtn = document.querySelector(".withdBtn");
+const withdrawForm = document.querySelector(".withdrawal-form");
 const wHistTable = document.querySelector(".wHistoryT");
+const noWith = document.querySelector(".noWith");
+const closeWithBtn = document.querySelector(".closeWithdrawalBox");
+const withModal = document.querySelector(".loader .content");
+const loader = document.querySelector(".loader");
+const loaderImg = document.querySelector(".loader-img");
 const url1 = "/Tchibo/v1/transactions/reqWithdrawal";
 const url2 = "/Tchibo/v1/auth/login";
 const token = localStorage.getItem("token");
 
 
-const submitWithdrawalForm = async()=>{
+const submitWithdrawalForm = async(e)=>{
+
+    e.preventDefault();
+
+    loader.classList.remove("d-none");
+    loaderImg.classList.remove("d-none");
+
     const amount = amountField.value;
     const accountNumber = ANumField.value;
     const accountName = ANameField.value;
@@ -25,23 +36,25 @@ const submitWithdrawalForm = async()=>{
         date
     }
     
-    console.log(body);
 
     try{
-        console.log(body);
         const response = await fetch(url1, {
             method: "POST",
             headers:prepareHeaders(),
             body: JSON.stringify(body)
         });
 
-        console.log(response);
+        await getWithdrawalLog();
+        loaderImg.classList.add("d-none");
+        withModal.classList.remove("d-none");
+
+
     }
         catch(err){
-            console.log(err);
+            loader.classList.add("d-none");
+            alert("An error occured");
         }
 
-        await getWithdrawalLog();
 
 }
 
@@ -62,6 +75,11 @@ const getWithdrawalLog = async ()=>{
 
 
 const placeDetails = (details)=>{
+
+    if(details.length===0){
+        return noWith.classList.remove("d-none")
+    }
+
     const wHistory = details.map((withdrawal, index)=>{
         return (
         `<tr>
@@ -92,5 +110,11 @@ const prepareToken = ()=>{
     return( headers);
 }
 
-withdrawBtn.addEventListener("click", submitWithdrawalForm);
-getWithdrawalLog();
+withdrawForm.addEventListener("submit", submitWithdrawalForm);
+closeWithBtn.addEventListener("click", ()=>{
+    loader.classList.add("d-none");
+})
+
+
+
+getWithdrawalLog().then(()=>{loader.classList.add("d-none")});

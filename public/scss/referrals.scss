@@ -81,6 +81,10 @@ $utilities: ();
 // Import Custom Table
 @import "custom-table";
 
+
+// Import Loader Overlay Full
+@import "loaderOverlay";
+
 :root {
   font-size: 16px;
 }
@@ -169,4 +173,24 @@ section.team{
   align-items: center;
   height: 90px;
   font-size: 1.2em;
+  width: 100%;
+  min-width: 30.828px;
+}
+
+.copyBtn{
+  &:focus{
+    background-color: tint-color($logoBlue,  20%);
+  }
+}
+
+.copied{
+  position: absolute;
+  background-color: white;
+  border-radius: 5px;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  padding: 4px 4px;
+  box-shadow: 1px 1px 5px 0 $logoBlue,
+  -1px -1px 3px 0 $logoBlue;
 }

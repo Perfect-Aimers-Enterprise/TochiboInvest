@@ -17,6 +17,20 @@
   <body>
 
 
+        <div class="loader position-fixed top-0 z-3">
+            <div class='loader-img '><img class="img-fluidCus" src="./assests/svg/loader3-1s-200px.svg" alt="" srcset=""></div>
+            <div class="content d-none">
+                <div><i class="icon fa-solid far fa-check-circle text-success"></i></div>
+                <h2>Tchibo Portal</h2>
+                <span class="message">
+                    Withdrawal Request Submitted Successfully
+                </span><br>
+                <button class="closeWithdrawalBox">Ok</button>
+            </div>
+            
+        </div>
+
+
     <div class="bodyOverlay d-none"></div>
 
    <div class="platform">
@@ -28,7 +42,7 @@
     <nav class="forPhones d-md-none">
         <div>
             <button class="showMenu text-white"><span class="fas fa-bars"></span></button>
-            <a href="">Deposit<span></span></a>
+            <a href="">Withdrawal<span></span></a>
             <a class="nLetters" href="">MO</a>
         </div>
     </nav>
@@ -100,14 +114,14 @@
                                 <label for="ANam">Account  Name</label>
                             </div>
                             <div class=" col col-md-10">
-                                <input id="ANam" type="text" class="form-control " required>
+                                <input id="ANam" type="text" class="form-control" required>
         
                             </div>
                             <div class="purpose col-md-2">
                                 <label for="ANum">Account Number</label>
                             </div>
                             <div class=" col-md-10" >
-                                <input id="ANum" type="text" class="form-control " required>
+                                <input id="ANum" type="number" class="form-control" required>
         
                             </div>
 
@@ -115,11 +129,11 @@
                                 <label for="BNam">Bank Name</label>
                             </div>
                             <div class=" col-md-10" >
-                                <input id="BNam" type="text" class="form-control " required>
+                                <input id="BNam" type="text" class="form-control" required>
         
                             </div>
                             <div class="btn-row">
-                                <button type="button" class="btn withdBtn">Withdraw</button>
+                                <button type="submit" class="btn withdBtn">Withdraw</button>
                             </div>
                         </form>
 
@@ -149,29 +163,13 @@
                                     </thead>
     
                                     <tbody class="wHistoryT">
-                                        <tr>
-                                            <td>1</td>
-                                            <td>300</td>
-                                            <td>First Bank</td>
-                                            <td>Fred Wayne</td>
-                                            <td>Pending</td>
-                                            <td>5th of Jan, 2023</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>500</td>
-                                            <td>Access Bank</td>
-                                            <td>Fred Wayne</td>
-                                            <td>Successful</td>
-                                            <td>17th of Jul, 2021</td>
-                                        </tr>
                                     </tbody>
     
     
                             </table>
-                                <div class="noRef d-none" style="min-width:486px">
+                                <div class="noRef noWith d-none">
                                     <div class="child">
-                                        You Have no referrals
+                                        You  have made no withdrawals
                                     </div>
                                 </div>
                         </div>

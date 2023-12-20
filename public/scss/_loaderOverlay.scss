@@ -19,4 +19,38 @@
     }
 
   }
+
+
+   .content{
+    border-radius: 7px;
+    text-align: center;
+    padding: 23px 17px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+     h2{
+    text-align: center;
+    }
+
+
+  .message{
+    font-size: 1.1em;
+  }
+  button{
+    background-color: rgb(49, 49, 155);
+    padding: 8px 15px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-top: .8rem;
+  }
+  .icon{
+    margin-bottom: .9rem;
+    color: rgb(236, 63, 33);
+    font-size: 4em;
+  }
+
 }
