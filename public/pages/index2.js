@@ -1,5 +1,3 @@
-// function setup
-// const review = null;
 const container = document.querySelector('#box');
 const next = document.querySelector('.next');
 const previous = document.querySelector('.previous');
@@ -13,16 +11,9 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 const fetchProductData = async () => {
-    try {
-        console.log("first");
-    
+    try{
         const response = await fetch('/api/v1/products')
-        console.log("here");
-        // console.log(response);
         const products = await response.json();
-        console.log(products);
-        console.log(products);
-        // return products
 
 
         allProducts = products
@@ -49,7 +40,6 @@ const fetchProductData = async () => {
 
 
         container.innerHTML = allProducts
-        console.log(container.innerHTML);
 
     } catch (error) {
         console.error('Error fetching product data:', error);
@@ -59,25 +49,27 @@ const fetchProductData = async () => {
 
 // Event listener for next button
 next.onclick = async () => {
-    container.firstElementChild.remove();
+    const firstElement = container.firstElementChild
+    if(firstElement) {
+        firstElement.style.display = 'none'
+    }
     currentItem++;
+
     if (currentItem > allProducts.length - 1) {
         currentItem = 0;
+        if(firstElement) {
+            firstElement.style.display = 'block'
+        }
     }
-
-        const newProduct = document.createElement('div');
-        newProduct.className = "flex mx-auto mb-3 here font-bold border-blue-900 rounded-[12px] border-2 sm:w-[70%] p-3 active:bg-blue-900";
-        // newProduct.innerHTML = allProducts[currentItem]
-
-        // container.appendChild(newProduct)
-        if (allProducts > 0) {
-            newProduct.innerHTML = allProducts[currentItem]
-            container.append(newProduct)   
+        if (allProducts.length > 0) {       
+            // container.innerHTML = allProducts[currentItem]
         } else {
             console.log('no product available');
         }
-
-    // fetchProductData();
 };
 
-// fetchProductData();
+// if (currentItem < allProducts.length) {
+//     firstElement.innerHTML = allProducts[currentItem] 
+// } else{
+//     console.log('Invalid index:', currentItem);
+// } 
