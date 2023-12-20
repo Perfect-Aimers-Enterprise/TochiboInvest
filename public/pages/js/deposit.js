@@ -45,7 +45,7 @@ const submitWithdrawalForm = async()=>{
 const getDepositLog = async ()=>{
     try{
         let response = await fetch("/Tchibo/v1/details/depositLog", {
-                headers:prepareToken()  
+                headers:prepareToken()
         });
         if (!response.ok) throw new Error("Internal Server Error");
         const details = await response.json();

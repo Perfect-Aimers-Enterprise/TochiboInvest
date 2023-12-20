@@ -107,53 +107,44 @@
                     </div>
 
                     <div class="structure md:flex gap-5">
-                        <div id="userBorder" class="bg-blue-900 mt-[10px] shadow-md shadow-gray-900">
-                            <div class="w-[300px]">
-                                <div class="flex items-center ml-[10px]">
-                                        <div id="usericon1" class="flex truncate mt-[10px] border-2 rounded-full" >
-                                            <i class="usericon1 mx-auto fa thin fa-user text-[20px]"></i>
-                                        </div>
-                                    <h1 class="ml-[10px] text-goldenrod mt-[10px] font-bold">USERS</h1>
-                                </div>
-    
-                                <div class="flex mb-[50px] justify-around mt-[20px] text-goldenrod">
-                                    <!-- Latest Registered Users  -->
-                                    <div>
-                                        <p class="font-bold">Latest Registered</p>
-                                        <h1>200</h1>
+                        
+                        <!-- Withdrawal -->
+                            <div id="userBorder" class="bg-blue-900 mt-[10px] shadow-md shadow-gray-900">
+                                <div class="w-[600px]">
+                                    <div class="flex items-center ml-[10px]">
+                                            <div id="usericon1" class="flex truncate mt-[10px] border-2 rounded-full" >
+                                                <i class="usericon1 mx-auto fa thin fa-user text-[20px]"></i>
+                                            </div>
+                                        <h1 class="ml-[10px] text-goldenrod mt-[10px] font-bold">ACCOUNT DETAILS</h1>
                                     </div>
-                                    <!-- Total Users  -->
-                                    <div>
-                                        <p class="font-bold">Total Users</p>
-                                        <h1>1,387,870</h1>
+        
+                                    <div class="flex mb-[50px] justify-around mt-[20px] text-goldenrod allAccountInfo">
+                                        <!-- ACCOUNT DETAILS -->
+                                        <div id="letconfirmwithdrawal">
+                                            <button>Confirm Withdrawal</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-    
-                        <div id="userBorder" class="bg-blue-900 mt-[10px] shadow-md shadow-gray-900">
-                            <div class="w-[300px]">
-                                <div class="flex items-center ml-[10px]">
-                                        <div id="usericon1" class="flex truncate mt-[10px] border-2 rounded-full" >
-                                            <i class="usericon1 mx-auto fa thin fa-user text-[20px]"></i>
-                                        </div>
-                                    <h1 class="ml-[10px] text-goldenrod mt-[10px] font-bold">USERS</h1>
-                                </div>
-    
-                                <div class="flex mb-[50px] justify-around mt-[20px] text-goldenrod">
-                                    <!-- Latest Registered Users  -->
-                                    <div>
-                                        <p class="font-bold">Latest Registered</p>
-                                        <h1>200</h1>
+                        
+                            <!-- Deposite -->
+                            <div id="userBorder" class="bg-blue-900 mt-[10px] shadow-md shadow-gray-900">
+                                <div class="w-[600px]">
+                                    <div class="flex items-center ml-[10px]">
+                                            <div id="usericon1" class="flex truncate mt-[10px] border-2 rounded-full" >
+                                                <i class="usericon1 mx-auto fa thin fa-user text-[20px]"></i>
+                                            </div>
+                                        <h1 class="ml-[10px] text-goldenrod mt-[10px] font-bold">ACCOUNT DETAILS</h1>
                                     </div>
-                                    <!-- Total Users  -->
-                                    <div>
-                                        <p class="font-bold">Total Users</p>
-                                        <h1>1,387,870</h1>
+        
+                                    <div class="flex mb-[50px] justify-around mt-[20px] text-goldenrod allAccountInfo">
+                                        <!-- ACCOUNT DETAILS -->
+                                        <div id="letconfirmdeposite">
+                                            <button>Confirm Deposite</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
                     </div>
 
                     <div class="structure">
@@ -322,13 +313,77 @@
                     </div>
                 </div> -->
             </div>
-
-
-
         </section>
         
+        <section id="withdrawal">
+            
+            <div id="withdrawaldiv1">
+                <div id="withdrawaldiv">
+                    <div class="cancelwithdrawal">X</div>
+                    <div class="withdrawalheader">
+                        <h1>Tchibo</h1>
+                        <p>Withdrawal Page</p>
+                    </div>
         
+                    <div class="withdrawContainer">
+                        <div>
+                            <div class="T-confirm">
+                                <p class="time">Time</p>
+                                <button class="button">
+                                    confirm
+                                </button>
+                            </div>
+                            <div class="withdrawalbody">
+                                <p class="wName">Henry@gmail.com</p>
+                                <p class="wAName">A/Name</p>
+                                <p class="wANo">A/No</p>
+                                <p class="wBName">Bank Name</p>
+                            </div>
+    
+                            <div class="underlinethrough"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="deposite">
+            
+            <div id="depositediv1">
+                <div id="depositediv">
+                    <div class="canceldeposite">X</div>
+                    <div class="depositeheader">
+                        <h1>Tchibo</h1>
+                        <p>deposite Page</p>
+                    </div>
+        
+                    <div class="depositeContainer">
+                        <div>
+                            <div class="T-confirm">
+                                <p class="time">Time</p>
+                                <button class="button">
+                                    confirm
+                                </button>
+                            </div>
+                            <div class="depositebody">
+                                <p class="wName">Henry@gmail.com</p>
+                                <p class="wAName">A/Name</p>
+                                <p class="wANo">A/No</p>
+                                <p class="wBName">Bank Name</p>
+                            </div>
+    
+                            <div class="underlinethrough"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
     </div>
+
+    <script src="transaction.js"></script>
+    <!-- <script src="depositetransaction.js"></script> -->
     <script src="admin.js"></script>
     <script src="accNo.js"></script>
 </body>
