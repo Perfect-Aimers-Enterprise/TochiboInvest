@@ -19,7 +19,6 @@ toggleIndicatorDisplay(main);
 
 const getDetails = async ()=>{
     try{
-        toggleIndicatorDisplay(loader);
         prepareToken();
         const response = await fetch("/Tchibo/v1/details/dashboard", {
             headers

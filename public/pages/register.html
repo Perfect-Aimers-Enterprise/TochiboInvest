@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/marvel.css">
     <link rel="stylesheet" href="./../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="icon" href="assests/img/logo.png" type="image/x-icon">
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/all.css">     -->
     <script src="js/register.js" defer></script>
@@ -12,7 +13,10 @@
     <title>Sign Up</title>
 </head>
 <body>
-
+    <div class="loader full d-none position-fixed top-0 z-3">
+        <div class='loader-img '><img class=" img-fluidCus" src="./assests/svg/loader3-1s-200px.svg" alt="" srcset=""></div>
+        
+    </div>
 
         <div class="container-fluid platform">
 
@@ -68,21 +72,21 @@
                         <div class="detail">
                             <span><i class="fas fa-person"></i></span>
                             <div>
-                                <input id="name" type="text" placeholder="Names">
+                                <input id="name" type="text" placeholder="Names" required>
                             </div>
                         </div>
     
                         <div class="detail">
                             <span><i class="fas fa-envelope"></i></span>
                             <div>
-                                <input id="email" placeholder="E-mail" type="text">  
+                                <input id="email" placeholder="E-mail" type="text" required>  
                             </div>
                             
                         </div>
                         <div class="detail">
                             <span><i class="fas fa-key"></i></span>
                             <div>
-                                <input id="password" placeholder="Password" type="text">  
+                                <input id="password" placeholder="Password" type="text" required>  
                             </div>
                             
                         </div>
@@ -110,9 +114,11 @@
                             <span><img src="./assests/svg/icons8-google-color/icons8-google-48.svg" alt="Google icon"></span>
                             <span>Sign Up with Google</span>
                         </div> -->
-    
+                        
+                        <div class="alreadyTaken text-danger fw-semibold text-center d-none">Email is already taken</div>
+
                         <div class="login2 mt-3">
-                            <span>Already Have an Account? </span><span><a href="authenticate-signIn.html">Sign In</a></span>
+                            <span>Already Have an Account? </span><span><a href="login.html">Sign In</a></span>
                         </div>
     
                     </div>
