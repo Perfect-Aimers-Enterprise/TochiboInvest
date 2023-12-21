@@ -7,7 +7,11 @@
         @apply flex truncate mt-[10px] border-2 rounded-full
     }
 } */
-
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 .hero__image{
     height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.724), rgba(0, 0, 0, 0.724)), url("../TCHIBO1/IMG-20231016-WA0077.jpg") ;
@@ -55,6 +59,12 @@
     text-transform: uppercase;
     font-size: 20px;
     margin-bottom: 10px;
+}
+.text-bluewy{
+    color: #fff;
+}
+.ff{
+    font-size: 15px;
 }
 #mainBar{
     background: rgb(212, 227, 255);
@@ -377,6 +387,15 @@
     height: 100%;
     display: none;
 }
+.letsPop{
+    background: linear-gradient(rgba(8, 2, 2, 0.888), rgba(14, 7, 7, 0.724));
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 100vh;
+}
 
 #depositediv1{
     display: flex;
@@ -442,4 +461,22 @@
     min-width: 300px;
     padding: 20px;
     text-align: center;
+}
+.purchaseDiv{
+    height: 30px;
+    padding-inline: 5px;
+    border-radius: 8px;
+    color: #fff;
+    /* padding: 10px; */
+}
+.purchaseDiv button {
+    outline: none;
+}
+.purchaseDiv:active {
+    background: #000;
+    transition: ease-in-out;
+}
+.middlediv{
+    display: flex;
+    align-items: center;
 }

@@ -7,7 +7,7 @@
     "node": "18.x"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tailwindcss -i ./public/pages/src/input.css -o ./public/pages/style.css",
     "start": "node app.js",
     "dev": "nodemon app.js",
     "compile-sass": "sass --watch src/scss:dist/public/css"
