@@ -39,7 +39,7 @@ const login = async (details)=>{
         localStorage.setItem("token", token);
         console.log("Token saved");
         console.log(response);
-        window.location.href = "/";
+        window.location.href = "/index.html";
 
     } catch (error) {
         console.log(error);

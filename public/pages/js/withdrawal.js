@@ -11,6 +11,7 @@ const loader = document.querySelector(".loader");
 const loaderImg = document.querySelector(".loader-img");
 const url1 = "/Tchibo/v1/transactions/reqWithdrawal";
 const url2 = "/Tchibo/v1/auth/login";
+const contentHolder = document.querySelector(".invisibleHolder")
 const token = localStorage.getItem("token");
 
 
@@ -64,9 +65,14 @@ const getWithdrawalLog = async ()=>{
         let response = await fetch("/Tchibo/v1/details/withdrawalLog", {
                 headers:prepareToken() 
         });
+        if(response.status===401){
+            window.location.href = "/login.html";
+            return;
+        }
         if (!response.ok) throw new Error("Internal Server Error");
         const details = await response.json();
         placeDetails(details);
+        contentHolder.classList.remove("d-none");
     }
     catch(err){
         alert(err.message);

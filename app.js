@@ -13,12 +13,14 @@ let app = express();
 const errorHandler = require("./middlewares/errorHandler.js");
 const notFound =  require("./middlewares/notFound.js");
 const authenticate = require("./middlewares/authenticate.js");
+const redirectAuth = require("./middlewares/redirectAuth");
 const detailsRouter = require("./routes/details.js")
 //Import Ruters
 // const jobRouter = require("./routes/Jobs.js");
 const auth = require("./routes/auth");
 const register = require("./routes/auth/registerRoute.js");
 const transacRouter = require("./routes/transactions.js");
+
 
 const multer = require('multer')
 const configuration = require('./configuration/multer')
@@ -36,17 +38,19 @@ app.set("trust proxy", 1);
 app.use(cors());
 app.use(helmet());
 app.use(xssCleaner());
-app.use(express.json());
 
+
+app.use(express.json());
 
 combinedRoute.use('/api/v1/products', configuration.router)
 combinedRoute.use('/api/v1/products', productRoute)
 combinedRoute.use('/api/v1/admin', accountDetails)
 
 
-// app.use("/Tochibo/v1/job", authenticate, jobRouter);
-app.use(express.static("public/pages"));
 
+// app.use("/Tochibo/v1/job", authenticate, jobRouter);
+
+app.use(express.static("public/pages"));
 app.use("/Tchibo/v1/auth/login", auth.login);
 app.use("/Tchibo/v1/auth/register", auth.register);
 app.use("/Tchibo/v1/details", authenticate, detailsRouter);
@@ -80,8 +84,6 @@ const start = async () => {
     await connectDB(process.env.MONGO_URI);
     app.listen(PORT, () => console.log("Server listening at port " + PORT));
 };
-
-
 
 
 start();

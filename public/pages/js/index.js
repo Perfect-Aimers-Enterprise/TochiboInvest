@@ -1,4 +1,3 @@
-const main = document.querySelector(".body-dom");
 const initials = document.querySelector(".nLetters");
 const fuName = document.querySelector(".name-detail");
 const emailHolder = document.querySelector(".email-detail");
@@ -11,10 +10,10 @@ const referralsInfo = document.querySelector(".referralsInfo");
 const loader = document.querySelector(".loader");
 const noRef = document.querySelector(".noRef");
 const fiName = document.querySelector(".fiName");
+const bodyContent = document.querySelector(".invisibleHolder");
 const headers = new Headers();
 
 
-toggleIndicatorDisplay(main);
 /** Insert Ui helper here */
 
 const getDetails = async ()=>{
@@ -23,13 +22,23 @@ const getDetails = async ()=>{
         const response = await fetch("/Tchibo/v1/details/dashboard", {
             headers
         });
+
+        if(response.status===401){
+            window.location.href = "/login.html";
+            return;
+        }
+
+
         const details = await response.json();
         const result = prepareDetails(details);
-        toggleIndicatorDisplay(main);
+        console.log("continue")
         toggleIndicatorDisplay(loader);
+        bodyContent.classList.remove("d-none");
     }
     catch(err){
+        console.log("ere")
         toggleIndicatorDisplay(loader);
+
         console.log(err);
         alert("An an error occured");
     }

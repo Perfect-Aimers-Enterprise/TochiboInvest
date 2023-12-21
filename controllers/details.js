@@ -5,6 +5,7 @@ const depositsModel = require("../models/deposit.js");
 const withdrawalModel = require("../models/withdrawal.js")
 
 const dashBoard = async(req, res)=>{
+    console.log("hey")
     const { userID } = req.user;
     let fs = await fSModel.findById(userID);
     fs = { PurchaseCount:fs.PurchaseCount, availableFunds:fs.availableFunds, totalInvested:fs.totalInvested };

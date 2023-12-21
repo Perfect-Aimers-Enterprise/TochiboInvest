@@ -9,16 +9,23 @@ const noRefC = document.querySelector(".noRefC");
 const loader = document.querySelector(".loader");
 const copyBtn = document.querySelector(".copyBtn");
 const copiedNode = document.querySelector(".copied");
+const bodyHider = document.querySelector(".invisibleHolder");
+
 
 const getReferrals = async()=>{
     try{
 
         let response = await fetch("/Tchibo/v1/details/referrals", {
             headers:prepareToken()});
+        if(response.status===401){
+            window.location.href = "/login.html";
+            return;
+        }
             if(!response.ok) throw new Error("An error occured");
         let details = await response.json();
         arrangeReferralData(details);
         loader.classList.add("d-none");
+        bodyHider.classList.remove("d-none");
     }
     catch(err){
         console.log(err);
