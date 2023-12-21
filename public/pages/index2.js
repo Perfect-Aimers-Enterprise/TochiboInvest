@@ -79,18 +79,26 @@ slideProducts = ()=>{
 next.onclick = slideProducts;
 
 const attachEventListeners = () => {
-    const purchaseDiv = document.querySelector('.purchaseDiv');
+    const container = document.querySelector('#box');
 
-    if (purchaseDiv) {
-        purchaseDiv.addEventListener('click', (e) => {
+    if (container) {
+        container.addEventListener('click', (e) => {
             const target = e.target;
+
+            // Check if the clicked element has the class 'purchaseBtn'
             if (target.classList.contains('purchaseBtn')) {
-                target.textContent = 'Confirmed';
+                // target.textContent = 'Confirmed';
+                if (target.textContent === 'Purchase') {
+                    target.textContent = 'Confirm'
+                }else{
+                    window.location.href = 'psuccessful.html'
+                }
             }
         });
     } else {
-        console.error('.purchaseDiv element not found');
+        console.error('#box element not found');
     }
 };
+
 
     
