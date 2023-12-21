@@ -1,4 +1,3 @@
-document.addEventListener('load', () => {
     const purchaseBtn = document.querySelector('.purchaseBtn');
     const purchaseDiv = document.querySelector('.purchaseDiv');
    
@@ -15,7 +14,6 @@ document.addEventListener('load', () => {
         }
     });
     
-});
 const emoji = document.querySelector('.emoji');
 const emo = '💸';
 emoji.innerText = emo;

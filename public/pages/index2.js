@@ -8,7 +8,11 @@ let point = 0;
 let allProducts = []
 
 window.addEventListener('DOMContentLoaded', () => {
-    fetchProductData().then(slideProducts);
+    fetchProductData().then(() => {
+        slideProducts();
+        attachEventListeners()
+    })
+    
 
 });
 
@@ -74,45 +78,19 @@ slideProducts = ()=>{
 }
 next.onclick = slideProducts;
 
+const attachEventListeners = () => {
+    const purchaseDiv = document.querySelector('.purchaseDiv');
+
+    if (purchaseDiv) {
+        purchaseDiv.addEventListener('click', (e) => {
+            const target = e.target;
+            if (target.classList.contains('purchaseBtn')) {
+                target.textContent = 'Confirmed';
+            }
+        });
+    } else {
+        console.error('.purchaseDiv element not found');
+    }
+};
+
     
-    // purchaseBtn.value = 'Confirm'
-
-
-// Event listener for next button
-// next.onclick = () => {
-//     console.log("first");
-//     // let initialContainer = container.innerHTML
-//     // console.log(initialContainer);
-//     // console.log(allProducts.length);
-//     const firstElement = container.firstElementChild
-//     console.log(firstElement);
-//     if(firstElement) {
-//         firstElement.remove()
-    
-//     }
-//     currentItem++;
-//     console.log(allProducts.length);
-//     if (currentItem > allProducts.length - 1) {
-
-//         currentItem = 0;
-        
-//         if(firstElement) {
-//             console.log('hi');
-//             firstElement.add()
-//         }
-//     }
-//     console.log('hello');
-//         if (allProducts.length > 0) { 
-//             // console.log(allProducts);      
-//             container.innerHTML = allProducts[currentItem]
-//         } else {
-//             console.log('no product available');
-//         }
-//         console.log('so');
-// };
-
-// if (currentItem < allProducts.length) {
-//     firstElement.innerHTML = allProducts[currentItem] 
-// } else{
-//     console.log('Invalid index:', currentItem);
-// } 
