@@ -17,6 +17,20 @@
   <body>
 
 
+        <div class="loader position-fixed top-0 z-3">
+            <div class='loader-img '><img class="img-fluidCus" src="./assests/svg/loader3-1s-200px.svg" alt="" srcset=""></div>
+            <div class="content d-none">
+                <div><i class="icon fa-solid far fa-check-circle text-success"></i></div>
+                <h2>Tchibo Portal</h2>
+                <span class="message">
+                    Withdrawal Request Submitted Successfully
+                </span><br>
+                <button class="closeWithdrawalBox">Ok</button>
+            </div>
+            
+        </div>
+
+
     <div class="bodyOverlay d-none"></div>
 
    <div class="platform">
@@ -28,7 +42,7 @@
     <nav class="forPhones d-md-none">
         <div>
             <button class="showMenu text-white"><span class="fas fa-bars"></span></button>
-            <a href="">Deposit<span></span></a>
+            <a href="">Withdrawal<span></span></a>
             <a class="nLetters" href="">MO</a>
         </div>
     </nav>
@@ -43,7 +57,7 @@
                         </div>
                     </div>
 
-                        <div class="sideBarLinks overflow-hidden py-4 row col row-cols-1 h-50 align-content-around text-muted ps-0">
+                        <div class="sideBarLinks overflow-hidden py-4 row col row-cols-1  align-content-around text-muted ps-0">
                             <div class="col"><a href="index.html" class="sideBarText"><span><i class="fas fa-house-user"></i></span>Dashboard</a></div>
                             <div class="col "><a class="sideBarText" href="products.html"><span><i class="fa-solid fa-bicycle"></i></span>Products</a></div>
                             <div class="col"><a class="sideBarText" href="deposit.html"><span><i class="fas fas fa-sign-in-alt"></i></span>Deposit</a></div>
@@ -69,7 +83,7 @@
                         <div class="modal-body text-center">
                             <span class="fs-5 fw-bold logoutTextHF">Tochibo Portal</span> <br>
                             Are you sure you want to signout? <br> <br>
-                            <a class="btn btn-danger" href="./authenticate-signIn.html">Yes!</a> <a class="btn cancel-btn" data-om-dismiss="modal" type="button">Cancel</a>
+                            <a class="btn btn-danger" href="./login.html">Yes!</a> <a class="btn cancel-btn" data-om-dismiss="modal" type="button">Cancel</a>
                         </div>
                     </div>
 
@@ -100,14 +114,14 @@
                                 <label for="ANam">Account  Name</label>
                             </div>
                             <div class=" col col-md-10">
-                                <input id="ANam" type="text" class="form-control " required>
+                                <input id="ANam" type="text" class="form-control" required>
         
                             </div>
                             <div class="purpose col-md-2">
                                 <label for="ANum">Account Number</label>
                             </div>
                             <div class=" col-md-10" >
-                                <input id="ANum" type="text" class="form-control " required>
+                                <input id="ANum" type="number" class="form-control" required>
         
                             </div>
 
@@ -115,11 +129,11 @@
                                 <label for="BNam">Bank Name</label>
                             </div>
                             <div class=" col-md-10" >
-                                <input id="BNam" type="text" class="form-control " required>
+                                <input id="BNam" type="text" class="form-control" required>
         
                             </div>
                             <div class="btn-row">
-                                <button type="button" class="btn withdBtn">Withdraw</button>
+                                <button type="submit" class="btn withdBtn">Withdraw</button>
                             </div>
                         </form>
 
@@ -132,8 +146,8 @@
 
                     <div class="mx-auto" style="max-width: 1000px;" class="pb-3">
 
-                    <div class="table-custom p-5 pt-4 mt-4  table-responsive ">
-                            <div class="title">Withdrawal History</div>
+                        <div class="table-custom p-5 pt-4 mt-4  table-responsive ">
+                        <div class="title">Withdrawal History</div>
 
                             <table class="table table-hover table-borderless mb-0 align-middle mt-3">
                                     <thead>
@@ -149,26 +163,15 @@
                                     </thead>
     
                                     <tbody class="wHistoryT">
-                                        <tr>
-                                            <td>1</td>
-                                            <td>300</td>
-                                            <td>First Bank</td>
-                                            <td>Fred Wayne</td>
-                                            <td>Pending</td>
-                                            <td>5th of Jan, 2023</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>500</td>
-                                            <td>Access Bank</td>
-                                            <td>Fred Wayne</td>
-                                            <td>Successful</td>
-                                            <td>17th of Jul, 2021</td>
-                                        </tr>
                                     </tbody>
     
     
                             </table>
+                                <div class="noRef noWith d-none">
+                                    <div class="child">
+                                        You  have made no withdrawals
+                                    </div>
+                                </div>
                         </div>
 
                     

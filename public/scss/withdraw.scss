@@ -81,8 +81,11 @@ $grid-breakpoints: (
 // Import Modal
 @import "modal";
 
+//Import Custom table
 @import "custom-table";
 
+//Import Loader Image
+@import "loaderOverlay";
 
 
 
@@ -193,3 +196,16 @@ body {
     margin-left: -1.5rem;
   }
 }
+
+.noRef{
+  font-style: italic;
+  background-color: rgb(136 131 131);
+  color: white;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  height: 90px;
+  font-size: 1.2em;
+  min-width: 420.234px;
+}
+

@@ -14,6 +14,22 @@
     <title>Referrals</title>
 </head>
 <body>
+
+
+    <div class="loader position-fixed top-0 z-3">
+            <div class='loader-img '><img class="img-fluidCus" src="./assests/svg/loader3-1s-200px.svg" alt="" srcset=""></div>
+            <div class="content d-none">
+                <div><i class="icon fa-solid far fa-check-circle text-success"></i></div>
+                <h2>Tchibo Portal</h2>
+                <span class="message">
+                    Withdrawal Request Submitted Successfully
+                </span><br>
+                <button class="closeWithdrawalBox">Ok</button>
+            </div>
+            <!-- <div class="withRequest">
+            </div> -->
+            
+        </div>
     
     
         <div class="bodyOverlay d-none"></div>
@@ -41,7 +57,7 @@
                         </div>
                     </div>
 
-                        <div class="sideBarLinks overflow-hidden py-4 row col row-cols-1 h-50 align-content-around text-muted ps-0">
+                        <div class="sideBarLinks overflow-hidden py-4 row col row-cols-1  align-content-around text-muted ps-0">
                             <div class="col"><a href="index.html" class="sideBarText"><span><i class="fas fa-house-user"></i></span>Dashboard</a></div>
                             <div class="col "><a class="sideBarText" href="products.html"><span><i class="fa-solid fa-bicycle"></i></span>Products</a></div>
                             <div class="col"><a class="sideBarText" href="deposit.html"><span><i class="fas fas fa-sign-in-alt"></i></span>Deposit</a></div>
@@ -79,17 +95,19 @@
 
 
 
-                    <section class="referral-body pt-5">
+                    <section class="referral-body pt-5 pt-md-0">
 
 
                         <!-- Referral Details section -->
-                        <section class="referral_details p-3">
+                        <section class="referral_details position-relative p-3">
 
                             <div class="referral_details_holder rows-cols-lg-2 p-4 maxCustom1 m-auto rounded-1">
                                 <div class="title">Referral Link</div>
                                 <div class="code mt-1"><input class="form-control ref-link" readonly value="tochibo/dhdakkja" type="text"></div>
-                                <div class="btn-row mt-2"><button class="btn btn-logoBlue">Copy</button></div>
+                                <div class="btn-row mt-2"><button class="btn btn-logoBlue copyBtn">Copy</button></div>
                             </div>
+
+                            <div class="copied d-none">Copied!</div>
 
                         </section>
 
@@ -140,7 +158,7 @@
 
 
                             </table>
-                            <div class="noRef noRefA d-none" style="min-width:400px">
+                            <div class="noRef noRefA d-none">
                                     <div class="child">
                                         You Have no team A referrals
                                     </div>
@@ -192,7 +210,7 @@
 
 
                             </table>
-                            <div class="noRef noRefB d-none" style="min-width:400px">
+                            <div class="noRef noRefB d-none">
                                     <div class="child">
                                         You Have no team B referrals
                                     </div>
@@ -243,7 +261,7 @@
 
 
                             </table>
-                            <div class="noRef noRefC d-none" style="min-width:400px">
+                            <div class="noRef noRefC d-none">
                                     <div class="child">
                                         You Have no team C referrals
                                     </div>

@@ -6,6 +6,9 @@ const tC = document.querySelector(".tCt");
 const noRefA = document.querySelector(".noRefA");
 const noRefB = document.querySelector(".noRefB");
 const noRefC = document.querySelector(".noRefC");
+const loader = document.querySelector(".loader");
+const copyBtn = document.querySelector(".copyBtn");
+const copiedNode = document.querySelector(".copied");
 
 const getReferrals = async()=>{
     try{
@@ -15,7 +18,7 @@ const getReferrals = async()=>{
             if(!response.ok) throw new Error("An error occured");
         let details = await response.json();
         arrangeReferralData(details);
-
+        loader.classList.add("d-none");
     }
     catch(err){
         console.log(err);
@@ -120,3 +123,17 @@ const arrangeReferralData = (details)=>{
 function toggleIndicatorDisplay(element){
     element.classList.toggle("d-none");
 }
+
+copyBtn.addEventListener("click", ()=>{
+    
+    const selection = window.getSelection()
+    let firstRange = document.createRange();
+    firstRange.selectNode(referralLink);
+    selection.addRange(firstRange);
+    document.execCommand("copy");
+    selection.removeAllRanges();
+    copiedNode.classList.remove("d-none");
+    setTimeout(() => {
+        copiedNode.classList.add("d-none");  
+    }, 1500);
+})

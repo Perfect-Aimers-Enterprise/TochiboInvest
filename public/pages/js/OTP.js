@@ -7,12 +7,17 @@ const params = new URLSearchParams(queryString);
 const resendbtn = document.querySelector(".resendbtn");
 const submitbtn = document.querySelector(".submitbtn");
 
+resendbtn.disabled = true;
+resendbtn.classList.add("disabled");
+
 
 const intervalId =setInterval(()=>{
     seconds.innerHTML--
     if(seconds.innerHTML==0){
         clearInterval(intervalId);
         hideText.style.display = "none";
+        resendbtn.disabled = false;
+        resendbtn.classList.remove("disabled");
     }
 }, 1000);
 

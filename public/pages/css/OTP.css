@@ -87,6 +87,11 @@ body{
     color: rgb(13, 13, 219);
 }
 
+.disabled{
+    color: rgb(135, 135, 150) !important;
+
+}
+
 .wrongOTP{
     color: red;
     text-align: center;

@@ -49,7 +49,7 @@ const prepareDetails = (details)=>{
         let names = user.name.split(" ");
         names = names.map((name, index)=>{
             if(index===0){
-                fiName.innerHTML = name;
+                fiName.innerHTML = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
             }
             return name[0]
         });

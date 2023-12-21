@@ -1,0 +1,8 @@
+.parent{
+    background-color: greenyellow;
+    width: 300px;
+    height: 40px;
+    -webkit-hyphens:auto;
+    -ms-hyphens:auto;
+    hyphens: auto;
+}

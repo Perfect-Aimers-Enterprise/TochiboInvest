@@ -42,7 +42,8 @@ const login = async (details)=>{
         window.location.href = "/";
 
     } catch (error) {
-        console.log(error)
+        console.log(error);
+        alert("An error occured");
     }
 }
 
