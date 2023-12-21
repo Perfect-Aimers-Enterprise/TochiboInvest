@@ -61,25 +61,36 @@ async function sendOTP(e){
             }, 3000);
         }
 
-        else if((response.ok) || (response.ok && data.msg==="An email of a pending user")){
+        else if(!response.ok){
+            throw new Error("An error occured");
+        }
+
+        else if(response.ok && data.msg==="An email of a pending user"){
         const { id } = data;
         const response = await resendOTP(id);
         if(!response.ok) throw new Error("An error occured");
+        loader.classList.remove("d-none");
+        window.location.href = `/OTP.html?id=${id}`;
+
+        }
+ 
+        else if(response.ok){
+        const { id } = data;
+        loader.classList.toggle("d-none");
         window.location.href = `/OTP.html?id=${id}`;
         }
 
         else{
             throw new Error("An error occured");
         }
-        loader.classList.toggle("d-none");
-    }
+        // loader.classList.toggle("d-none");
+        }
+
     catch(err){
+        // console.log(err)
         loader.classList.toggle("d-none");
         alert("Internal Server Error");
     }
-
-
-
 }
 
 

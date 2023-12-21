@@ -21,8 +21,8 @@ const withdrawalSchema = new mongoose.Schema({
         type:Number,
     },
     date:{
-        type:Date,
-        default:Date.now().toString()
+        type:String,
+        required: [true, "The date of withdrawal is required"]
     },
     status:{
         type:String,

@@ -51,7 +51,6 @@ const sendOtp = async(req, res, user)=>{
                 `
     };
     // console.log(Date.now(), otpDoc.expiresAt);
-    console.log("here");
     const info = await Transporter.sendMail(mailOptions);
     console.log("now");
     res.status(201).send({ msg:"OTP sent successfully", id: user._id});

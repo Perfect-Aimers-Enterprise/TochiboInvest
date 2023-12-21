@@ -1,4 +1,11 @@
 const mongoose = require("mongoose");
+const now = new Date();
+const dateOptions = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    weekday: 'short',
+};
 
 const referralSchema = new mongoose.Schema({
     email: {
@@ -10,8 +17,8 @@ const referralSchema = new mongoose.Schema({
         type: Number,
     },
     date: {
-        default: Date.now().toString(),
-        type: Date,
+        type: String,
+        default: now.toLocaleString("en-US", dateOptions)
     },
     Team:{
         type:String,

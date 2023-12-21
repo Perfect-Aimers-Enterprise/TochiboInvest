@@ -11,8 +11,16 @@ const loader = document.querySelector(".loader");
 const loaderImg = document.querySelector(".loader-img");
 const url1 = "/Tchibo/v1/transactions/reqWithdrawal";
 const url2 = "/Tchibo/v1/auth/login";
-const contentHolder = document.querySelector(".invisibleHolder")
+const contentHolder = document.querySelector(".invisibleHolder");
 const token = localStorage.getItem("token");
+const now = new Date();
+const dateOptions = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    weekday: "short"
+};
+
 
 
 const submitWithdrawalForm = async(e)=>{
@@ -26,8 +34,9 @@ const submitWithdrawalForm = async(e)=>{
     const accountNumber = ANumField.value;
     const accountName = ANameField.value;
     const bankName = BNameField.value;
+    const date = now.toLocaleString('en-US', dateOptions);
 
-    const date = Date.now();
+
     
     const body = {
         amount,
@@ -73,6 +82,7 @@ const getWithdrawalLog = async ()=>{
         const details = await response.json();
         placeDetails(details);
         contentHolder.classList.remove("d-none");
+        // console.log("hello")
     }
     catch(err){
         alert(err.message);
@@ -83,8 +93,11 @@ const getWithdrawalLog = async ()=>{
 const placeDetails = (details)=>{
 
     if(details.length===0){
+        console.log(details.length)
         return noWith.classList.remove("d-none")
     }
+
+    noWith.classList.add("d-none");
 
     const wHistory = details.map((withdrawal, index)=>{
         return (

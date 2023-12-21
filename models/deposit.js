@@ -17,8 +17,8 @@ const depositSchema = new mongoose.Schema({
         type:Number,
     },
     date:{
-        type:Date,
-        default:Date.now().toString()
+        type:String,
+        required: [true, "The time of the deposit is required"]
     },
     status:{
         type:String,
