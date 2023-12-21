@@ -387,14 +387,34 @@ html, body {
     height: 100%;
     display: none;
 }
+.pbody{
+   background: linear-gradient(rgba(8, 2, 2, 0.888), rgba(14, 7, 7, 0.724)); 
+}
+.heightty{
+    height: 100vh;
+}
 .letsPop{
-    background: linear-gradient(rgba(8, 2, 2, 0.888), rgba(14, 7, 7, 0.724));
+    
     color: #fff;
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: center;
-    height: 100vh;
+    height: 100%;
+}
+.uglybtn{
+    position: absolute;
+    top: 60%;
+    left: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.uglybtn button {
+    background: transparent;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
 }
 
 #depositediv1{
