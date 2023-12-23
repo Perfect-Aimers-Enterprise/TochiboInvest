@@ -10,7 +10,8 @@
     "build": "tailwindcss -i ./public/pages/src/input.css -o ./public/pages/style.css",
     "start": "node app.js",
     "dev": "nodemon app.js",
-    "compile-sass": "sass --watch src/scss:dist/public/css"
+    "compile-sass": "sass --watch src/scss:dist/public/css",
+     "installDependencies": "npm install && npm start"
   },
   "keywords": [],
   "author": "",
