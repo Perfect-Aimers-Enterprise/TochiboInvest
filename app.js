@@ -55,7 +55,10 @@ app.use("/Tchibo/v1/auth/login", auth.login);
 app.use("/Tchibo/v1/auth/register", auth.register);
 app.use("/Tchibo/v1/details", authenticate, detailsRouter);
 app.use("/Tchibo/v1/transactions", authenticate, transacRouter);
-app.use('/', combinedRoute)
+app.use("/Tchibo/v1/admin/transactions", transacRouter);
+app.use('/', combinedRoute);
+app.use("/Tchibo/v1/admin/details", detailsRouter);
+
 
 const upload = configuration.upload
 app.post('/upload', upload.single('image'), (req, res) => {

@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+// const adminWithReqModel = require("./adminWiths");
 
 const withdrawalSchema = new mongoose.Schema({
     accountName: {
@@ -12,10 +13,6 @@ const withdrawalSchema = new mongoose.Schema({
     bankName:{
         type: String,
         required: [true, "Bank name is required" ]
-    },
-    _id: {
-        type: Number,
-        required:[true, "The id of the user requesting withdrawal is necessary"]
     },
     amount:{
         type:Number,
@@ -44,6 +41,15 @@ const withdrawalsLogSchema = new mongoose.Schema({
     }
 
 })
+
+
+// withdrawalsLogSchema.pre("save", async function(){
+//     const length = this.withdrawals.length;
+//     const latestReq = this.withdrawals[length-1];
+//     await adminWithReqModel.create({  });
+//     console.log(latest);
+
+// })
 
 
 

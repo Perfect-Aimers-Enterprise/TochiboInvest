@@ -2,7 +2,8 @@ const userModel = require("../models/User.js");
 const referralsModel = require("../models/referrals.js");
 const fSModel = require("../models/financialSummary.js");
 const depositsModel = require("../models/deposit.js");
-const withdrawalModel = require("../models/withdrawal.js")
+const withdrawalModel = require("../models/withdrawal.js");
+const adminWithReqModel = require("../models/adminWiths.js");
 
 const dashBoard = async(req, res)=>{
     console.log("hey")
@@ -42,8 +43,15 @@ const withdrawalLog = async(req, res)=>{
     console.log("log");
 }
 
+const allPendingWithdrawalLogs = async(req, res)=>{
+    const allPendingWithdrawals = await adminWithReqModel.find({});
+    console.log(allPendingWithdrawals);
+    res.status(200).send(allPendingWithdrawals);
+}
+
 module.exports = {
     dashBoard,
     referrals,
-    withdrawalLog
+    withdrawalLog,
+    allPendingWithdrawalLogs
 }

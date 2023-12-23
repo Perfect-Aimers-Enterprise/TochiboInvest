@@ -11,9 +11,9 @@ const withdrawContainer = document.querySelector('.withdrawContainer')
 const letconfirmwithdrawal = document.querySelector('#letconfirmwithdrawal')
 
 
-window.addEventListener('DOMContentLoaded', () => {
-    getWithdrawalSection()
-    getDepositeSection()
+window.addEventListener('DOMContentLoaded', async () => {
+    await getWithdrawalSection();
+    await getDepositeSection();
 })
 
 cancelwithdrawal.onclick = () => {
@@ -25,37 +25,75 @@ letconfirmwithdrawal.onclick = () => {
 
 const getWithdrawalSection = async () => {
     try {
-        const response = await fetch('/Tchibo/v1/details/withdrawalLog')
-        const withdrawreqs = response.json()
+        const response = await fetch("/Tchibo/v1/admin/details/allPendingwithdrawalLogs")
+        const withdrawreqs = await response.json()
 
         const allwithdrawreq = withdrawreqs
-        .map((withdrawreq) => {
-            const {time, wAName, wANo, wBName, wName} = withdrawreq
-            return `
+        .map((element)=>{
+    const { date, email, accountName, accountNumber, bankName, amount, _id, userID } = element;
+    console.log(_id);
+    console.log(userID);
+    console.log(element);
+    return(
+        `
             <div>
                 <div class="T-confirm">
-                    <p class="time">${time}</p>
-                    <button class="button">
+                    <p class="time">${date}</p>
+                    <button class="button" data-requestID="${_id}" data-userID="${userID}">
                         confirm
                     </button>
                 </div>
-                <div class="withdrawalbody">
-                    <p class="wName">${wName}</p>
-                    <p class="wAName">${wAName}</p>
-                    <p class="wANo">${wANo}</p>
-                    <p class="wBName">${wBName}</p>
+                <div class="withdrawalbody" >
+                    <p class="wName">${email}</p>
+                    <p class="wAName">${accountName}</p>
+                    <p class="wName">${amount}</p>
+                    <p class="wANo">${accountNumber}</p>
+                    <p class="wBName">${bankName}</p>
                 </div>
 
                 <div class="underlinethrough"></div>
-                </div>
-            `
-        }).join('')
-        allwithdrawreq.innerHTML = withdrawContainer
-        console.log(allwithdrawreq.innerHTML);
+            </div>
+        `
+    )
+    }).join('')
+        withdrawContainer.innerHTML = allwithdrawreq;
+        assignEventListeners();
+
     } catch (error) {
         prompt('There is an error with getting the withdrawal route', error)
     }
 }
+
+function assignEventListeners(){
+    const confirmBtns = document.querySelectorAll(".withdrawContainer .button")
+    for(let i=0; i<confirmBtns.length; i++){
+        confirmBtns[i].addEventListener("click", confirmWithReq);
+    }
+}
+
+async function confirmWithReq(e){
+    console.log(e.target)
+    const requestID = e.target.getAttribute("data-requestid");
+    const userID = e.target.getAttribute("data-userid");
+    console.log(requestID, userID);
+    const body = JSON.stringify(
+        {
+            requestID,
+            userID
+        })
+    console.log(body);
+
+    const response = await fetch("/Tchibo/v1/admin/transactions/confirmWithdrawal", {
+        method: "POST",
+        headers:{
+            "Content-Type":"application/json"
+        },
+        body
+    })
+
+    return response;
+}
+
 
 
 
@@ -106,3 +144,54 @@ const getDepositeSection = async () => {
         prompt('There is an error with getting the deposite route', error)
     }
 }
+
+
+
+/*
+async function viewWithdrawals(){
+    try{
+        const response = await fetch("/Tchibo/v1/admin/details/allPendingwithdrawalLogs");
+        const data = await response.json();
+        console.log(data);
+        placeDetails(data);
+    }
+    catch(err){
+        alert("An error occured")
+        console.log(err)
+    }
+}
+
+function placeDetails(data){
+
+
+    const withReqs = data.map((element)=>{
+    const { date, email, accountName, accountNumber, bankName, amount } = element;
+
+    return(
+        `
+            <div>
+                <div class="T-confirm">
+                    <p class="time">${date}</p>
+                    <button class="button">
+                        confirm
+                    </button>
+                </div>
+                <div class="withdrawalbody">
+                    <p class="wName">${email}</p>
+                    <p class="wAName">${accountName}</p>
+                    <p class="wName">${amount}</p>
+                    <p class="wANo">${accountNumber}</p>
+                    <p class="wBName">${bankName}</p>
+                </div>
+
+                <div class="underlinethrough"></div>
+            </div>
+        `
+    )
+    }).join("");
+
+   withContainer.innerHTML = withReqs; 
+
+}
+
+*/
