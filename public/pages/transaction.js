@@ -8,12 +8,22 @@ const wBName = document.querySelector('.wBName')
 const withdrawal = document.querySelector('#withdrawal')
 const withdrawaldiv1 = document.querySelector('#withdrawaldiv1')
 const withdrawContainer = document.querySelector('.withdrawContainer')
-const letconfirmwithdrawal = document.querySelector('#letconfirmwithdrawal')
+const letconfirmwithdrawal = document.querySelector('#letconfirmwithdrawal');
+const loader = document.querySelector("div.loader");
+const loaderImg = document.querySelector(".loader .loader-img");
+const sucIndicate = document.querySelector(".loader .content");
 
 
 window.addEventListener('DOMContentLoaded', async () => {
-    await getWithdrawalSection();
-    await getDepositeSection();
+    try{
+
+        await getWithdrawalSection();
+        await getDepositeSection();
+        sucIndicate.classList.remove("d-none");
+    }
+    catch(err){
+        alert("An error occured");
+    }
 })
 
 cancelwithdrawal.onclick = () => {
@@ -72,6 +82,7 @@ function assignEventListeners(){
 }
 
 async function confirmWithReq(e){
+    
     console.log(e.target)
     const requestID = e.target.getAttribute("data-requestid");
     const userID = e.target.getAttribute("data-userid");
