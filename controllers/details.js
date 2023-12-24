@@ -38,9 +38,9 @@ const referrals = async (req, res)=>{
 const withdrawalLog = async(req, res)=>{
     const { userID } = req.user;
     const withdrawalLog = await withdrawalModel.findById(userID);
+    console.log(userID);
     const withdrawals = withdrawalLog.withdrawals;
     res.status(200).json(withdrawals);
-    console.log("log");
 }
 
 const allPendingWithdrawalLogs = async(req, res)=>{

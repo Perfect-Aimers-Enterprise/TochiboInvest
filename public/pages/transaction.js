@@ -75,6 +75,8 @@ const getWithdrawalSection = async () => {
 }
 
 function assignEventListeners(){
+    loader.classList.remove("d-none");
+    loader.classList.remove("d-none");
     const confirmBtns = document.querySelectorAll(".withdrawContainer .button")
     for(let i=0; i<confirmBtns.length; i++){
         confirmBtns[i].addEventListener("click", confirmWithReq);
@@ -82,7 +84,7 @@ function assignEventListeners(){
 }
 
 async function confirmWithReq(e){
-    
+
     console.log(e.target)
     const requestID = e.target.getAttribute("data-requestid");
     const userID = e.target.getAttribute("data-userid");

@@ -5,7 +5,6 @@ const cors = require("cors");
 const helmet = require("helmet");
 const xssCleaner = require("xss-clean"); /* xss-cleaner dependency was written in javascript and has no types declaration file for TypeScript so nothing could be done about the red squiggle */
 const rateLimiter = require("express-rate-limit");
-const functions = require("firebase-functions");
 const connectDB = require("./db/connect.js");
 // Import express and initialise app
 const express = require("express");
@@ -90,6 +89,7 @@ const start = async () => {
 };
 
 
+// module.exports = app;
+
 start();
 
-exports.app = functions.https.onRequest(app);

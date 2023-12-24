@@ -2,13 +2,11 @@
   "name": "Tochibo",
   "version": "1.0.0",
   "description": "",
-  "main": "functions/app.js",
+  "main": "app.js",
   "scripts": {
-    "build": "tailwindcss -i ./public/pages/src/input.css -o ./public/pages/style.css",
-    "start": "node functions/app.js",
+    "start": "node app.js",
     "dev": "nodemon app.js",
-    "compile-sass": "sass --watch src/scss:dist/public/css",
-    "installDependencies": "npm install && npm start"
+    "vercel-build":"echo hello"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +20,7 @@
     "express-async-errors": "^3.1.1",
     "express-rate-limit": "^7.1.1",
     "firebase-functions": "^4.5.0",
+    "firebase-tools": "^13.0.2",
     "helmet": "^7.0.0",
     "http-status-codes": "^2.3.0",
     "jsonwebtoken": "^9.0.2",
@@ -37,6 +36,8 @@
     "@types/cors": "^2.8.14",
     "@types/express": "^4.17.18",
     "@types/jsonwebtoken": "^9.0.3",
+    "eslint": "^8.56.0",
+    "eslint-config-google": "^0.14.0",
     "nodemon": "^3.0.1"
   }
 }
