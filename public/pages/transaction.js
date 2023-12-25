@@ -70,7 +70,7 @@ const getWithdrawalSection = async () => {
         assignEventListeners();
 
     } catch (error) {
-        prompt('There is an error with getting the withdrawal route', error)
+        console.log('There is an error with getting the withdrawal route', error);
     }
 }
 
@@ -154,7 +154,7 @@ const getDepositeSection = async () => {
         alldeposites.innerHTML = depositeContainerawContainer
         console.log(alldeposites.innerHTML);
     } catch (error) {
-        prompt('There is an error with getting the deposite route', error)
+        console.log('There is an error with getting the deposite route', error);
     }
 }
 

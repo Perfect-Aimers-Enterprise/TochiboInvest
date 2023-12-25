@@ -63,11 +63,16 @@ html, body {
 .text-bluewy{
     color: #fff;
 }
-.ff{
+/* .ff{
     font-size: 15px;
-}
+} */
 #mainBar{
-    background: rgb(212, 227, 255);
+    /* background: rgb(212, 227, 255); */
+    right: 0;
+    width: 90%;
+}
+.issue{
+    margin: 1px;
 }
 @media(max-width: 680px){
 
